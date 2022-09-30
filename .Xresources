@@ -1,0 +1,113 @@
+!! Xft ---------------------------------
+Xft.dpi:       96
+Xft.autohint:  false
+Xft.antialias: true
+Xft.hinting:   true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+Xft.rgba:      none
+
+!! Cursor-theme ------------------------
+Xcursor.theme: Adwaita
+Xcursor.size:  32
+
+!! XTerm -------------------------------
+XTerm*termName:           xterm-256color
+XTerm*faceName:           JetBrains Mono
+XTerm*faceSize:           10
+XTerm*borderWidth:        0
+XTerm*cursorBlink:        true
+XTerm*scrollBar:          false
+XTerm*alternateScroll:    true
+XTerm*fastScroll:         true
+XTerm*selectToClipboard:  true
+XTerm*eightBitInput:      false
+XTerm*VT100.Translations: #override \
+                          Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+                          Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+!! Colors ------------------------------
+XTerm*background:  #212132
+XTerm*foreground:  #E5E5E5
+XTerm*cursorColor: #FA71B1
+XTerm*color0:      #212132
+XTerm*color8:      #AFD4E0
+XTerm*color1:      #EB2A2A
+XTerm*color9:      #FF4767
+XTerm*color2:      #329632
+XTerm*color10:     #5AC95A
+XTerm*color3:      #FF7F00
+XTerm*color11:     #F660CE
+XTerm*color4:      #4949FA
+XTerm*color12:     #8B8BFF
+XTerm*color5:      #863E86
+XTerm*color13:     #B960B9
+XTerm*color6:      #00B0C2
+XTerm*color14:     #5DE1EE
+XTerm*color7:      #69C46B
+XTerm*color15:     #E5E5E5
+
+!! URXVT -------------------------------
+! Черный
+URxvt.color0: # 000000
+URxvt.color8: # 555753
+! Красный
+URxvt.color1: # 990099
+URxvt.color9: # 8E388E
+! Зеленый
+URxvt.color2: # 4E9A06
+URxvt.color10: # 699000
+! Желтый
+URxvt.color3: # FFA500
+URxvt.color11: # FFA500
+! Синий
+URxvt.color4: # 3465A4
+URxvt.color12: # 729FCF
+! Пурпурный
+URxvt.color5: # 75507B
+URxvt.color13: # AD7FA8
+! Голубой
+URxvt.color6: # 06989A
+URxvt.color14: # 34E2E2
+! Белый
+URxvt.color7: #FFFFFF
+URxvt.color15: #FFFFFF
+
+!# - Внешний вид окна
+!# | - Указываем заголовок окна, по умолчанию urxvt
+!#URxvt.title: Terminal
+!# | - Добавляем кастомную иконку, которая должна быть в указанном нами адресе
+URxvt.icon Файл: /usr/share/icons/kora/apps/scalable/terminal.svg 
+!# | - Убираем полосы прокрутки (лично мне они не нравятся)
+URxvt.scrollBar: false
+!# | - Добавляем прозрачность
+URxvt.глубина: 32
+URxvt.background: [80] # 000000
+!# | - Определяем основной цвет (буквы)
+URxvt.foreground: # 699000
+!# | - Определяем цвет курсора
+URxvt.cursorColor: # 699000
+!# | - Добавляем мигание курсору
+URxvt.cursorBlink: true
+!# | - Мы определяем тип используемого шрифта (чтобы получить полный список шрифтов, доступных в вашей системе, используйте "fc-list" на вашей консоли).
+URxvt.font: JetBrains Mono pixelsize = 12
+!# | - Если между символами есть разделение, добавьте, где -1 - количество пикселей для уменьшения
+!URxvt.letterSpace: -1
+!# | - Добавлена ​​поддержка вкладок
+URxvt.perl-ext-commoni: по умолчанию, с вкладками
+!# | - Определяем цвет фона вкладок
+URxvt.tabbed.tab-bg: # 000000
+!# | - Определяем фронтальный цвет ресниц
+URxvt.tabbed.tab-fg: # 699000
+!# | - Определяем цвет фона разделителей табуляции
+URxvt.tabbed.tabbar-bg: # 000000
+!# | - Определяем цвет лицевой стороны разделителей табуляции
+URxvt.tabbed.tabbar-fg: # 4E9A06
+
+!! Xcalc -------------------------------
+XCalc*ti.background: #212132
+XCalc*ti.bevel.background: #212132
+XCalc*ti.bevel.screen*background: #212132
+XCalc*ti.bevel.screen*foreground: #E5E5E5
+XCalc*ti.Command.background: #212132
+XCalc*ti.Command.foreground: #E5E5E5
