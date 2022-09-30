@@ -1,0 +1,8 @@
+#!/bin/bash
+STATE=`mocp -i`
+#echo $STATE
+if [ "$STATE" = "State: STOP" ]; then
+    echo "off"
+else
+    mocp --format "%artist - %title"
+fi
