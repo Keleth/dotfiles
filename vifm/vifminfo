@@ -33,114 +33,15 @@
 # Bookmarks:
 
 # TUI:
-ar
+al
 q0
 v2
 ov
 m-1
-l-10,2
+l2
 r12
 
 # Left window history (oldest to newest):
-d/home/danila
-	Видео
-6
-d/home/danila/Видео
-	_nibbler
-9
-d/home/danila/Видео/_nibbler
-	..
-0
-d/home/danila/Видео
-	_nibbler
-9
-d/home/danila
-	Загрузки
-8
-d/home/danila/Загрузки
-	_nibbler
-2
-d/home/danila/Загрузки/_nibbler
-	Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty
-2
-d/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty
-	The.World's.Favourite.Clown.1991.XviD.DVDRip.[eng]_weconty.avi
-54
-d/home/danila
-	Загрузки
-8
-d/home
-	danila
-1
-d/
-	etc
-3
-d/etc
-	libpaper.d
-50
-d/
-	var
-21
-d/var
-	local
-4
-d/var/local
-	..
-0
-d/var
-	..
-0
-d/
-	usr
-20
-d/usr
-	share
-11
-d/usr/share
-	moc
-50
-d/usr/share/moc
-	themes
-1
-d/usr/share/moc/themes
-	..
-0
-d/usr/share/moc
-	themes
-1
-d/usr/share
-	moc
-50
-d/usr
-	local
-9
-d/usr/local
-	..
-0
-d/usr
-	local
-9
-d/usr/local
-	share
-8
-d/usr/local/share
-	..
-0
-d/usr/local
-	share
-8
-d/usr
-	..
-0
-d/
-	etc
-3
-d/etc
-	libpaper.d
-50
-d/
-	usr
-20
 d/usr
 	lib64
 6
@@ -222,87 +123,228 @@ d/home/danila/Загрузки/_nibbler
 d/home/danila/Загрузки/_nibbler/_tor.files
 	(trip hop Dub abstract experimental leftfield) Massive Attack - discography дискография (53 releases), 1988 - 2012, MP3, 320 kbp [rutracker-4270565].torrent
 1
+d/home/danila/develop/dotfiles
+	..
+0
+d/home/danila/develop
+	dotfiles
+1
+d/home/danila/develop/dotfiles
+	..
+0
+d/home/danila/develop
+	bash
+2
+d/home/danila
+	develop
+2
+d/home
+	danila
+1
+d/home/danila
+	Музыка
+3
+d/home/danila/Музыка
+	..
+0
+d/home/danila
+	_bk
+11
+d/home/danila/_bk
+	..
+0
+d/home/danila
+	Загрузки
+1
+d/home/danila/Загрузки
+	_nibbler
+1
+d/home/danila/Загрузки/_nibbler
+	Legacy
+5
+d/home/danila/Музыка
+	Attack
+4
+d/home/danila/Музыка/Attack
+	..
+0
+d/home/danila/Музыка
+	Massive Attack
+50
+d/home/danila/Музыка/Massive Attack
+	..
+0
+d/home/danila/Музыка
+	Massive Attack
+50
+d/home/danila/Музыка/Massive Attack
+	..
+0
+d/home/danila/Музыка
+	Dark
+22
+d/home/danila/Музыка/Dark
+	1997 - Seduction
+1
+d/home/danila/Музыка/Dark/1997 - Seduction
+	..
+0
+d/home/danila/Музыка/Dark
+	1997 - Seduction
+1
+d/home/danila/Музыка
+	Dark
+22
+d/home/danila
+	Музыка
+10
+d/home
+	tor
+3
+d/home/tor
+	..
+0
+d/home
+	danila
+1
+d/home/danila
+	Видео
+6
+d/home/danila/Видео
+	_nibbler
+9
+d/home/danila/Видео/_nibbler
+	..
+0
+d/home/danila/Видео
+	_nibbler
+9
+d/home/danila
+	soft
+5
+d/home
+	danila
+1
+d/home/danila
+	Общедоступные
+11
+d/home/danila/Общедоступные
+	..
+0
+d/home/danila
+	Шаблоны
+13
+d/home/danila/Шаблоны
+	..
+0
+d/home/danila
+	Загрузки
+8
+d/home/danila/Загрузки
+	_nibbler
+2
+d/home/danila
+	Документы
+7
+d/home/danila/Документы
+	3D
+1
+d/home/danila/Документы/3D
+	Misc
+7
+d/home/danila/Документы/3D/Misc
+	The Witch (3D Printing - Model Marketplace)
+1
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)
+	v1
+1
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)/v1
+	images
+1
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)/v1/images
+	..
+0
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)/v1
+	stl file
+2
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)/v1/stl file
+	..
+0
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)/v1
+	stl file
+2
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)
+	v2
+2
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)/v2
+	images
+1
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)/v2/images
+	4piece.jpg
+1
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)/v2
+	images
+1
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)
+	v3
+3
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)/v3
+	stl files
+1
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)/v3/stl files
+	witch_Body-Fixed.stl
+2
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)/v3
+	7pieces_exploded.jpg
+2
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)
+	v2
+2
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)/v2
+	stl files
+2
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)/v2/stl files
+	..
+0
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)/v2
+	stl files
+2
+d/home/danila/Документы/3D/Misc/The Witch (3D Printing - Model Marketplace)
+	v2
+2
+d/home/danila/Документы/3D/Misc
+	The Witch (3D Printing - Model Marketplace)
+1
+d/home/danila/Документы/3D
+	Games
+5
+d/home/danila/Документы/3D/Games
+	..
+0
+d/home/danila/Документы/3D
+	_in
+12
+d/home/danila/Документы/3D/_in
+	..
+0
+d/home/danila/Документы/3D
+	_in
+12
+d/home/danila/Документы
+	3D
+1
+d/home/danila
+	soft
+5
+d/home/danila/soft
+	chitubox
+3
+d/home/danila/soft/chitubox
+	CHITUBOX
+7
 d
 
 # Right window history (oldest to newest):
-D/etc
-	..
-0
-D/
-	tmp
-19
-D/tmp
-	..
-0
-D/
-	home
-4
-D/home
-	danila
-1
-D/home/danila
-	TrashBin
-1
-D/home/danila/TrashBin
-	Adobe
-1
-D/home/danila
-	_bk
-3
-D/home/danila/_bk
-	..
-0
-D/home/danila
-	..
-0
-D/home
-	danila
-1
-D/home/danila
-	.config
-2
-D/home/danila/.config
-	vifm
-18
-D/home/danila/.config/vifm
-	colors
-1
-D/home/danila/.config/vifm/colors
-	..
-0
-D/home/danila/.config/vifm
-	..
-0
-D/home/danila/.config
-	vifm
-18
-D/home/danila
-	Yandex.Disk
-2
-D/home/danila/Yandex.Disk
-	..
-0
-D/home/danila
-	TrashBin
-1
-D/home/danila/TrashBin
-	Adobe
-1
-D/home/danila
-	.config
-2
-D/home/danila/.config
-	vifm
-18
-D/home/danila/.config/vifm
-	scripts
-2
-D/home/danila/.config/vifm/scripts
-	..
-0
-D/home/danila/.config/vifm
-	scripts
-2
 D/home/danila/.config
 	..
 0
@@ -523,8 +565,86 @@ D/home/danila/Загрузки/_nibbler
 	Полицейский из Беверли-Хиллз-2 (Премьер + Оригинал).avi
 21
 D/home/danila/Загрузки
-	1Lxk-Erodqxhk7d4-1.m4v
+	5е5е5е.m4v
+9
+D/home/danila
+	.config
+2
+D/home/danila/.config
+	..
+0
+D/home/danila
+	.config
+2
+D/home/danila/.config
+	..
+0
+D/home/danila
+	.config
+2
+D/home/danila/.config
+	..
+0
+D/home/danila
+	Изображения
+30
+D/home/danila/Загрузки
+	_nibbler
+1
+D/home/danila/Загрузки/_nibbler
+	Massive Attack - Discography
 8
+D/home/danila/Загрузки/_nibbler/Massive Attack - Discography
+	+ ep, single, soundtrack
+2
+D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ ep, single, soundtrack
+	..
+0
+D/home/danila/Загрузки/_nibbler/Massive Attack - Discography
+	+ compilation, collaboration
+1
+D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ compilation, collaboration
+	2006.03.23 - Collected
+4
+D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ compilation, collaboration/2006.03.23 - Collected
+	..
+0
+D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ compilation, collaboration
+	2008.09.14 - Obelisk
+5
+D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ compilation, collaboration/2008.09.14 - Obelisk
+	..
+0
+D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ compilation, collaboration
+	2010.03.27 - Selected
+6
+D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ compilation, collaboration/2010.03.27 - Selected
+	..
+0
+D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ compilation, collaboration
+	..
+0
+D/home/danila/Загрузки/_nibbler/Massive Attack - Discography
+	..
+0
+D/home/danila/Загрузки/_nibbler
+	StarWars_KotOR_Collection
+12
+D/home/danila/Загрузки
+	Telegram Desktop
+1
+D/home/danila/Загрузки/Telegram Desktop
+	..
+0
+D/home/danila/Загрузки
+	Telegram Desktop
+3
+D/home/danila
+	Загрузки
+29
+D/home/danila/Загрузки
+	CHITUBOX_V1.9.4.tar.gz
+50
 D
 
 # Command line history (oldest to newest):
@@ -547,12 +667,18 @@ D
 :empty
 :lstrash
 :df
+:mkdir Massive Attack
+:mkdir chitubox
+:! tarxzvpf %f
+:! tar xzvpf %f
+:shell
 :q
 
 # Search history (oldest to newest):
 /vi
 /x86
 /moc
+/chi
 
 # Prompt history (oldest to newest):
 pBH-2.04.(27.12.1972).XviD.DVDRip.[rus.eng]_weconty.avi
@@ -560,10 +686,13 @@ pgruvbox_theme
 pgruvbox_theme.sv
 pmocp
 pmoc
+p'Massive Attack'
+pMassive Attack
 
 # Local filter history (oldest to newest):
 
 # Registers:
+""/home/danila/.local/share/vifm/Trash/000_CHITUBOX_V1.9.4.tar.gz
 
 # Directory stack (oldest to newest):
 
@@ -574,6 +703,10 @@ t/home/danila/.local/share/vifm/Trash/000_TrashBin
 	/home/danila/TrashBin
 t/home/danila/.local/share/vifm/Trash/000_Hovering Thoughts - Spence.mp3.sfk
 	/home/danila/Загрузки/Hovering Thoughts - Spence.mp3.sfk
+t/home/danila/.local/share/vifm/Trash/000_Attack
+	/home/danila/Музыка/Attack
+t/home/danila/.local/share/vifm/Trash/000_CHITUBOX_V1.9.4.tar.gz
+	/home/danila/soft/chitubox/CHITUBOX_V1.9.4.tar.gz
 
 # State:
 f
