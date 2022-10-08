@@ -5,10 +5,6 @@
 	/home/danila/bin/
 	..
 1660207846
-'c
-	/home/danila/Документы/
-	..
-1664512738
 'd
 	/home/danila/Загрузки/
 	..
@@ -17,6 +13,10 @@
 	/home/danila/
 	..
 1660207846
+'c
+	/home/danila/Документы/
+	..
+1664512738
 'm
 	/home/danila/Музыка/
 	..
@@ -33,33 +33,15 @@
 # Bookmarks:
 
 # TUI:
-al
+ar
 q0
 v2
 ov
 m-1
 l2
-r12
+r2
 
 # Left window history (oldest to newest):
-d/usr
-	lib64
-6
-d/usr/lib64
-	..
-0
-d/usr
-	lib
-4
-d/usr/lib
-	x86_64-linux-gnu
-50
-d/usr/lib/x86_64-linux-gnu
-	moc
-50
-d/usr/lib/x86_64-linux-gnu/moc
-	decoder_plugins
-1
 d/usr/lib/x86_64-linux-gnu/moc/decoder_plugins
 	libaac_decoder.so
 1
@@ -90,36 +72,9 @@ d/usr/share/moc
 d/usr/share/moc/themes
 	..
 0
-d/home/danila/Загрузки
-	fonts
-1
-d/home/danila/Загрузки/fonts
-	..
-0
-d/home/danila/Загрузки
-	fonts
-1
-d/home/danila/Загрузки/fonts
-	ttf
-1
-d/home/danila/Загрузки/fonts/ttf
-	JetBrainsMono-Bold.ttf
-1
-d/home/danila/Загрузки/fonts
-	ttf
-1
-d/home/danila/Загрузки
-	Робот-полицейский Робокоп Robocop (Пол Верховен Paul Verhoeven) [1987, США, Фантастика, Боевик, SATRip] [Fullscreen] MVO (ОР [rutracker-5238627].torrent
-11
 d/home/danila/Музыка
 	..
 0
-d/home/danila/Загрузки
-	_nibbler
-1
-d/home/danila/Загрузки/_nibbler
-	_tor.files
-7
 d/home/danila/Загрузки/_nibbler/_tor.files
 	(trip hop Dub abstract experimental leftfield) Massive Attack - discography дискография (53 releases), 1988 - 2012, MP3, 320 kbp [rutracker-4270565].torrent
 1
@@ -135,39 +90,18 @@ d/home/danila/develop/dotfiles
 d/home/danila/develop
 	bash
 2
-d/home/danila
-	develop
-2
 d/home
 	danila
 1
-d/home/danila
-	Музыка
-3
 d/home/danila/Музыка
 	..
 0
-d/home/danila
-	_bk
-11
 d/home/danila/_bk
 	..
 0
-d/home/danila
-	Загрузки
-1
-d/home/danila/Загрузки
-	_nibbler
-1
-d/home/danila/Загрузки/_nibbler
-	Legacy
-5
 d/home/danila/Музыка
 	Attack
 4
-d/home/danila/Музыка/Attack
-	..
-0
 d/home/danila/Музыка
 	Massive Attack
 50
@@ -195,9 +129,6 @@ d/home/danila/Музыка/Dark
 d/home/danila/Музыка
 	Dark
 22
-d/home/danila
-	Музыка
-10
 d/home
 	tor
 3
@@ -207,45 +138,15 @@ d/home/tor
 d/home
 	danila
 1
-d/home/danila
-	Видео
-6
-d/home/danila/Видео
-	_nibbler
-9
-d/home/danila/Видео/_nibbler
-	..
-0
-d/home/danila/Видео
-	_nibbler
-9
-d/home/danila
-	soft
-5
 d/home
 	danila
 1
-d/home/danila
-	Общедоступные
-11
 d/home/danila/Общедоступные
 	..
 0
-d/home/danila
-	Шаблоны
-13
 d/home/danila/Шаблоны
 	..
 0
-d/home/danila
-	Загрузки
-8
-d/home/danila/Загрузки
-	_nibbler
-2
-d/home/danila
-	Документы
-7
 d/home/danila/Документы
 	3D
 1
@@ -333,18 +234,132 @@ d/home/danila/Документы/3D
 d/home/danila/Документы
 	3D
 1
-d/home/danila
-	soft
-5
 d/home/danila/soft
 	chitubox
 3
 d/home/danila/soft/chitubox
 	CHITUBOX
 7
+d/home/danila/soft
+	chitubox
+3
+d/home/danila/Загрузки/_nibbler/_tor.files
+	На последнем дыхании Переводя дыхание À bout de souffle Breathless (Жан-Люк Годар Jean-Luc Godard) [1960, Франция, драма, [rutracker-5858022].torrent
+1
+d/home/danila
+	Видео
+6
+d/home/danila/Видео
+	_nibbler
+9
+d/home/danila/Видео/_nibbler
+	..
+0
+d/home/danila/Видео
+	_nibbler
+9
+d/home/danila
+	Загрузки
+8
+d/home/danila/Загрузки
+	_nibbler
+2
+d/home/danila/Загрузки/_nibbler
+	Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty
+2
+d/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty
+	Benny Hill - The Best Of (1992)
+1
+d/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty/Benny Hill - The Best Of (1992)
+	..
+0
+d/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty
+	Benny Hill - The Ultimate Collection (2000)
+2
+d/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty/Benny Hill - The Ultimate Collection (2000)
+	..
+0
+d/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty
+	Benny Hill - The Ultimate Collection (2000)
+2
+d/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty/Benny Hill - The Ultimate Collection (2000)
+	..
+0
+d/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty
+	Benny Hill - The Ultimate Collection (2000)
+2
+d/home/danila/Загрузки/_nibbler
+	Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty
+2
+d/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty
+	Benny Hill - The Ultimate Collection (2000)
+2
+d/home/danila/Загрузки/_nibbler
+	Concord Orchestra - Symphonic Rock-Hits (2017-2018)
+3
+d/home/danila/Загрузки/_nibbler/Concord Orchestra - Symphonic Rock-Hits (2017-2018)
+	..
+0
+d/home/danila/Загрузки/_nibbler
+	Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty
+2
+d/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty
+	..
+0
+d/home/danila/Загрузки/_nibbler
+	Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty
+2
+d/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty
+	BH-2.04.(27.12.1972).XviD.DVDRip.[rus.eng]_weconty.avi
+3
 d
 
 # Right window history (oldest to newest):
+D/home/danila
+	.config
+2
+D/home/danila/.config
+	vifm
+18
+D/home/danila/.config/vifm
+	colors
+1
+D/home/danila/.config/vifm/colors
+	..
+0
+D/home/danila/.config/vifm
+	..
+0
+D/home/danila/.config
+	vifm
+18
+D/home/danila
+	Yandex.Disk
+2
+D/home/danila/Yandex.Disk
+	..
+0
+D/home/danila
+	TrashBin
+1
+D/home/danila/TrashBin
+	Adobe
+1
+D/home/danila
+	.config
+2
+D/home/danila/.config
+	vifm
+18
+D/home/danila/.config/vifm
+	scripts
+2
+D/home/danila/.config/vifm/scripts
+	..
+0
+D/home/danila/.config/vifm
+	scripts
+2
 D/home/danila/.config
 	..
 0
@@ -436,224 +451,173 @@ D/home/danila/.config/vifm
 	..
 0
 D/home/danila/.config
-	..
-0
+	touchegg
+14
 D/home/danila
-	.config
-2
-D/home/danila/.config
-	eog
-12
-D/home/danila/Загрузки
-	..
-0
-D/home/danila
-	Загрузки
+	Музыка
+14
+D/home/danila/Музыка
+	Stratovarius
 18
-D/home/danila/Загрузки
-	7 сентября.mp4
-22
-D/home/danila
+D/home/danila/Музыка/Stratovarius
+	Studio albums
+1
+D/home/danila/Музыка/Stratovarius/Studio albums
+	1994 - Dreamspace
+1
+D/home/danila/Музыка/Stratovarius/Studio albums/1994 - Dreamspace
 	..
 0
-D/home
-	danila
-1
-D/home/danila
-	Загрузки
-1
-D/home/danila/Загрузки
-	_nibbler
-1
-D/home/danila
-	.config
-2
-D/home/danila/.config
-	enchant
-7
-D/home/danila/.config/enchant
-	en.dic
-1
-D/home/danila/.config
-	moc
-29
-D/home/danila/.config/moc
-	themes
-1
-D/home/danila/.config/moc/themes
-	gruvbox
-1
-D/home/danila/.config/moc
-	themes
-1
-D/home/danila/.config/moc/themes
-	gruvbox_theme
-1
-D/home/danila/.config/moc
-	themes
-1
-D/home/danila/.config/moc/themes
+D/home/danila/Музыка/Stratovarius/Studio albums
 	..
 0
-D/home/danila/.config/moc
-	..
-0
-D/home/danila/.config
-	..
-0
-D/home/danila
-	.config
-2
-D/home/danila/.config
-	moc
-29
-D/home/danila/.config/moc
-	themes
+D/home/danila/Музыка/Stratovarius
+	Studio albums
 1
-D/home/danila/.config/moc/themes
-	..
-0
-D/home/danila/.config/moc
-	..
-0
-D/home/danila/.config
-	..
-0
-D/home/danila
-	.fonts
+D/home/danila/Музыка
+	Mystic Moods Orchestra
 4
-D/home/danila/.fonts
-	JetBrains
-1
-D/home/danila/.fonts/JetBrains
-	JetBrainsMono-Bold.ttf
-2
+D/home/danila/Музыка/Mystic Moods Orchestra
+	..
+0
+D/home/danila/Музыка
+	Mystic Moods Orchestra
+4
 D/home/danila/Загрузки
 	_nibbler
-1
-D/home/danila/Загрузки/_nibbler
-	_tor.files
-3
-D/home/danila/Загрузки/_nibbler/_tor.files
-	..
-0
-D/home/danila/Загрузки/_nibbler
-	_tor.files
-3
-D/home/danila/Загрузки/_nibbler/_tor.files
-	..
-0
-D/home/danila/Загрузки/_nibbler
-	.vifm-Trash-1000
-1
-D/home/danila/Загрузки/_nibbler/.vifm-Trash-1000
-	..
-0
-D/home/danila/Загрузки/_nibbler
-	_tor.files
 2
-D/home/danila/Загрузки/_nibbler/_tor.files
-	Харлей Дэвидсон и ковбой Мальборо Harley Davidson and the Marlboro Man (Саймон Уинсер Simon Wincer) [1991, США, боевик, BDRip] [rutracker-5064175].torrent
-1
 D/home/danila/Загрузки/_nibbler
-	PlayBoy.Old
-8
-D/home/danila/Загрузки/_nibbler/PlayBoy.Old
+	Legacy
+6
+D/home/danila/Загрузки/_nibbler/Legacy
+	1 2001
+1
+D/home/danila/Загрузки/_nibbler/Legacy/1 2001
+	..
+0
+D/home/danila/Загрузки/_nibbler/Legacy
+	4 2002
+2
+D/home/danila/Загрузки/_nibbler/Legacy/4 2002
+	..
+0
+D/home/danila/Загрузки/_nibbler/Legacy
 	..
 0
 D/home/danila/Загрузки/_nibbler
-	Полицейский из Беверли-Хиллз-2 (Премьер + Оригинал).avi
-21
-D/home/danila/Загрузки
-	5е5е5е.m4v
-9
-D/home/danila
-	.config
-2
-D/home/danila/.config
+	Legacy
+6
+D/home/danila/Загрузки/_nibbler/Legacy
 	..
 0
-D/home/danila
-	.config
-2
-D/home/danila/.config
-	..
-0
-D/home/danila
-	.config
-2
-D/home/danila/.config
-	..
-0
-D/home/danila
-	Изображения
-30
-D/home/danila/Загрузки
-	_nibbler
-1
 D/home/danila/Загрузки/_nibbler
 	Massive Attack - Discography
-8
-D/home/danila/Загрузки/_nibbler/Massive Attack - Discography
-	+ ep, single, soundtrack
-2
-D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ ep, single, soundtrack
-	..
-0
-D/home/danila/Загрузки/_nibbler/Massive Attack - Discography
-	+ compilation, collaboration
-1
-D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ compilation, collaboration
-	2006.03.23 - Collected
-4
-D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ compilation, collaboration/2006.03.23 - Collected
-	..
-0
-D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ compilation, collaboration
-	2008.09.14 - Obelisk
-5
-D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ compilation, collaboration/2008.09.14 - Obelisk
-	..
-0
-D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ compilation, collaboration
-	2010.03.27 - Selected
-6
-D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ compilation, collaboration/2010.03.27 - Selected
-	..
-0
-D/home/danila/Загрузки/_nibbler/Massive Attack - Discography/+ compilation, collaboration
-	..
-0
+7
 D/home/danila/Загрузки/_nibbler/Massive Attack - Discography
 	..
 0
 D/home/danila/Загрузки/_nibbler
-	StarWars_KotOR_Collection
-12
-D/home/danila/Загрузки
-	Telegram Desktop
-1
-D/home/danila/Загрузки/Telegram Desktop
+	#recycle
+2
+D/home/danila/Загрузки/_nibbler/#recycle
 	..
 0
-D/home/danila/Загрузки
-	Telegram Desktop
-3
+D/home/danila/Загрузки/_nibbler
+	Heavy Metal
+4
 D/home/danila
-	Загрузки
-29
-D/home/danila/Загрузки
-	CHITUBOX_V1.9.4.tar.gz
-50
+	Музыка
+23
+D/home/danila/Музыка
+	Mystic Moods Orchestra
+13
+D/home/danila/Музыка/Mystic Moods Orchestra
+	1966 Nighttide
+1
+D/home/danila/Музыка
+	Mystic Moods Orchestra
+13
+D/home/danila
+	develop
+16
+D/home/danila/develop
+	dotfiles
+16
+D/home/danila/develop/dotfiles
+	..
+0
+D/home/danila/develop
+	..
+0
+D/home/danila
+	Музыка
+23
+D/home/danila/Музыка
+	Super Instrumental Collection MP3
+33
+D/home/danila/Музыка/Super Instrumental Collection MP3
+	1994 - Super Instrumental 02
+2
+D/home/danila/Музыка/Super Instrumental Collection MP3/1994 - Super Instrumental 02
+	..
+0
+D/home/danila/Музыка/Super Instrumental Collection MP3
+	1995 - Super Instrumental 05
+5
+D/home/danila/Музыка/Super Instrumental Collection MP3/1995 - Super Instrumental 05
+	..
+0
+D/home/danila/Музыка/Super Instrumental Collection MP3
+	1995 - Super Instrumental 06
+6
+D/home/danila/Музыка/Super Instrumental Collection MP3/1995 - Super Instrumental 06
+	..
+0
+D/home/danila/Музыка/Super Instrumental Collection MP3
+	1995 - Super Instrumental 10
+10
+D/home/danila/Музыка/Super Instrumental Collection MP3/1995 - Super Instrumental 10
+	..
+0
+D/home/danila/Музыка/Super Instrumental Collection MP3
+	1995 - Super Instrumental 11
+11
+D/home/danila/Музыка/Super Instrumental Collection MP3/1995 - Super Instrumental 11
+	..
+0
+D/home/danila/Музыка/Super Instrumental Collection MP3
+	1995 - Super Instrumental 11
+11
+D/home/danila/Музыка/Super Instrumental Collection MP3/1995 - Super Instrumental 11
+	..
+0
+D/home/danila/Музыка/Super Instrumental Collection MP3
+	1995 - Super Instrumental 11
+11
+D/home/danila/Музыка/Super Instrumental Collection MP3/1995 - Super Instrumental 11
+	..
+0
+D/home/danila/Музыка/Super Instrumental Collection MP3
+	..
+0
+D/home/danila/Музыка
+	The Best World Instrumental Hits
+34
+D/home/danila/Музыка/The Best World Instrumental Hits
+	..
+0
+D/home/danila/Музыка
+	Romantic Collection
+9
+D/home/danila/Музыка/Romantic Collection
+	..
+0
+D/home/danila/Музыка
+	Romantic Collection
+9
 D
 
 # Command line history (oldest to newest):
-:vlc %f
-:!vlc %f
-:marks
-:mkdir vifm
-:touch gruvbox.vifm
-:touch palenight.vifm
 :sort
 :md
 :mkdir moc
@@ -672,27 +636,39 @@ D
 :! tarxzvpf %f
 :! tar xzvpf %f
 :shell
+:vlc %f
+:!vlc %f
+:marks
+:mkdir vifm
+:touch gruvbox.vifm
+:touch palenight.vifm
+:! wc -l %d
+:!ls | wc -l %d
+:! ls -l %d | wc -l
+:feh 
+:!feh
 :q
 
 # Search history (oldest to newest):
-/vi
 /x86
 /moc
 /chi
+/vi
+/Str
 
 # Prompt history (oldest to newest):
-pBH-2.04.(27.12.1972).XviD.DVDRip.[rus.eng]_weconty.avi
 pgruvbox_theme
 pgruvbox_theme.sv
 pmocp
 pmoc
 p'Massive Attack'
 pMassive Attack
+pBH-2.04.(27.12.1972).XviD.DVDRip.[rus.eng]_weconty.avi
 
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/danila/.local/share/vifm/Trash/000_CHITUBOX_V1.9.4.tar.gz
+""/home/danila/Загрузки/_nibbler/.vifm-Trash-1000/000_BH-2.03.(25.10.1972).XviD.DVDRip.[rus.eng]_weconty.avi
 
 # Directory stack (oldest to newest):
 
@@ -701,6 +677,16 @@ t/home/danila/Загрузки/_nibbler/.vifm-Trash-1000/000_vifm
 	/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty/vifm
 t/home/danila/.local/share/vifm/Trash/000_TrashBin
 	/home/danila/TrashBin
+t/home/danila/Загрузки/_nibbler/.vifm-Trash-1000/000_BH-1.10.(24.11.1971).XviD.DVDRip.[rus.eng]_weconty.avi
+	/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty/BH-1.10.(24.11.1971).XviD.DVDRip.[rus.eng]_weconty.avi
+t/home/danila/Загрузки/_nibbler/.vifm-Trash-1000/000_BH-1.11.(22.12.1971).XviD.DVDRip.[rus.eng]_weconty.avi
+	/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty/BH-1.11.(22.12.1971).XviD.DVDRip.[rus.eng]_weconty.avi
+t/home/danila/Загрузки/_nibbler/.vifm-Trash-1000/000_BH-2.01.(23.02.1972).XviD.DVDRip.[rus.eng]_weconty.avi
+	/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty/BH-2.01.(23.02.1972).XviD.DVDRip.[rus.eng]_weconty.avi
+t/home/danila/Загрузки/_nibbler/.vifm-Trash-1000/000_BH-2.02.(22.03.1972).XviD.DVDRip.[rus.eng]_weconty.avi
+	/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty/BH-2.02.(22.03.1972).XviD.DVDRip.[rus.eng]_weconty.avi
+t/home/danila/Загрузки/_nibbler/.vifm-Trash-1000/000_BH-2.03.(25.10.1972).XviD.DVDRip.[rus.eng]_weconty.avi
+	/home/danila/Загрузки/_nibbler/Benny.Hill.Complete&Unadulterated.1969-1989(R)_weconty/BH-2.03.(25.10.1972).XviD.DVDRip.[rus.eng]_weconty.avi
 t/home/danila/.local/share/vifm/Trash/000_Hovering Thoughts - Spence.mp3.sfk
 	/home/danila/Загрузки/Hovering Thoughts - Spence.mp3.sfk
 t/home/danila/.local/share/vifm/Trash/000_Attack
