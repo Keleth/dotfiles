@@ -49,7 +49,9 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+--beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+
+beautiful.init("~/.config/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "sakura"
@@ -63,6 +65,13 @@ editor_cmd = terminal .. " -e " .. editor
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
 
+awful.util.tagnames = {  "➊", "➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒" }
+--awful.util.tagnames = { "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }
+--awful.util.tagnames = { "⌘", "♐", "⌥", "ℵ" }
+--awful.util.tagnames = { "www", "edit", "gimp", "inkscape", "music" }
+-- Use this : https://fontawesome.com/cheatsheet
+--awful.util.tagnames = { "", "", "", "", "" }
+
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile,
@@ -70,7 +79,7 @@ awful.layout.layouts = {
     --awful.layout.suit.tile.left,
     --awful.layout.suit.tile.bottom,
     awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
+    -- awful.layout.suit.fair,
     --awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral,
     --awful.layout.suit.spiral.dwindle,
@@ -90,8 +99,11 @@ myawesomemenu = {
    { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
    { "manual", terminal .. " -e man awesome" },
    { "edit config", editor_cmd .. " " .. awesome.conffile },
-   { "restart", awesome.restart },
+--    { "restart", awesome.restart },
    { "quit", function() awesome.quit() end },
+   { "suspend", "systemctl suspend"},
+   { "reboot", "systemctl reboot"},
+   { "shutdown", "systemctl poweroff" },
 }
 
 local menu_awesome = { "awesome", myawesomemenu, beautiful.awesome_icon }
@@ -294,9 +306,11 @@ globalkeys = gears.table.join(
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn.with_shell("sakura") end,
               {description = "open a terminal", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "Return", function () awful.spawn.with_shell("thunar") end,
+              {description = "open a file manager Thunar", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit,
+    awful.key({ modkey, "Shift"   }, "e", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
@@ -331,7 +345,7 @@ globalkeys = gears.table.join(
     -- Prompt
 --    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
 --              {description = "run prompt", group = "launcher"}),
-    awful.key({ modkey },            "d",     function () awful.spawn("dmenu_run") end,
+    awful.key({ modkey },            "d",     function () awful.spawn("dmenu_run -i -nb '#282c34' -nf '#bbc2cf' -sb '#3e4451' -sf '#98be65' -fn JetBrainsMono:bold:pixelsize=14") end,
               {description = "run dmenu", group = "launcher"}),
 
     awful.key({ modkey }, "x",
@@ -346,7 +360,22 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "show the menubar", group = "launcher"}),
+
+    -- Volumeconrtol
+    awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn("amixer -D pulse sset Master 5%+") end,
+            {description = "increase volume", group="launcher"}),
+    awful.key({}, "XF86AudioLowerVolume", function() awful.spawn("amixer -D pulse sset Master 5%-") end,
+            {description = "decrease volume", group="launcher"}),
+    awful.key({}, "XF86AudioMute", function() awful.spawn("amixer -D pulse sset Master toggle") end,
+            {description = "mute volume", group="launcher"}),
+    awful.key({}, "XF86AudioPlay", function() awful.spawn("mocp -G") end,
+            {description = "toggle play/pause", group="launcher"}),
+    awful.key({}, "XF86AudioNext", function() awful.spawn("mocp -f") end,
+            {description = "mpc next", group="launcher"}),
+    awful.key({}, "XF86AudioPrev", function() awful.spawn("mocp -r") end,
+            {description = "mpc prev", group="launcher"})
+
 )
 
 clientkeys = gears.table.join(
@@ -356,7 +385,7 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
+    awful.key({ modkey, "Shift"   }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
@@ -510,12 +539,24 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+      }, properties = { titlebars_enabled = false }
     },
 
-    -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "2" } },
+    -- Set Telegram always float.
+    { rule = { class = "Telegram" },
+       properties = { screen = 1, tag = "2", floating=true }
+    },
+
+    -- Set Firefox to always map on the tag named "4" on screen 1.
+    { rule = { class = "Firefox" },
+       properties = { screen = 1, tag = "4" }
+    },
+
+   -- Firefox Picture-in-Picture always on top and on all tags
+    { rule = { class = "Firefox-esr", name="Картинка в картинке"},
+      except = { class = "Navigator" },
+      properties = { floating = true, above = true, maximized = false, sticky = true }
+    },
 }
 -- }}}
 
@@ -584,10 +625,14 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Gaps
-beautiful.useless_gap = 20
+beautiful.useless_gap = 8
 
 -- Autostart applications
-awful.spawn.with_shell("picom")
-awful.spawn.with_shell('setxkbmap -model "pc105" -layout "us,ru" -option "grp:caps_toggle,grp_led:scroll"')
-awful.spawn.with_shell("/usr/bin/emacs --daemon &")
-awful.spawn.with_shell("yandex-disk start &")
+awful.spawn.with_shell("picom -b --config  $HOME/.config/awesome/picom.conf")
+awful.spawn.with_shell("$HOME/.config/awesome/autostart.sh")
+--awful.spawn.with_shell('setxkbmap -model "pc105" -layout "us,ru" -option "grp:caps_toggle,grp_led:scroll"')
+-- awful.spawn.with_shell "volumeicon &")
+-- awful.spawn.with_shell("/usr/bin/emacs --daemon &")
+-- awful.spawn.with_shell("mpd")
+-- awful.spawn.with_shell("yandex-disk start")
+-- awful.spawn.with_shell("nitrogen --restore")

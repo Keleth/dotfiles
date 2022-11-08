@@ -1,0 +1,7 @@
+picom -b --config  /home/danila/.config/lxsession/LXDE/picom.conf
+@lxpanel --profile LXDE
+@pcmanfm --desktop --profile LXDE
+/usr/bin/emacs --daemon &
+yandex-disk start &
+/usr/bin/feh --randomize --bg-fill ~/Изображения/wallpapers/*
+~/soft/Telegram/Telegram &

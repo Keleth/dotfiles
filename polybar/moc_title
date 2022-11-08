@@ -1,8 +1,10 @@
 #!/bin/bash
-STATE=`mocp -i`
+#STATE=`mocp -i`
 #echo $STATE
-if [ "$STATE" = "State: STOP" ]; then
+STATE=`mpc | grep "\[paused\]" | wc -l`
+if [ "$STATE" = "1" ]; then
     echo "off"
 else
-    mocp --format "%artist - %title"
+    mpc | head -1
+#    mocp --format "%artist - %title"
 fi

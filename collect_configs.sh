@@ -4,9 +4,12 @@ CFG=~/.config/
 cp -rv ${CFG}i3 $DIR
 cp -rv ${CFG}moc $DIR
 cp -rv ${CFG}polybar $DIR
-cp -rv ${CFG}vifm $DIR
+#cp -rv ${CFG}vifm $DIR
 cp -rv ${CFG}sakura $DIR
 cp -rv ${CFG}awesome $DIR
+cp -rv ${CFG}lxsession $DIR
+cp -rv ${CFG}lxterminal $DIR
+cp -rv ${CFG}openbox $DIR
 cp -v ~/.Xresources $DIR
-cp -v ~/.vimrc $DIR
+#cp -v ~/.vimrc $DIR
 cp -v ~/.bashrc $DIR
