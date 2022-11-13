@@ -285,6 +285,8 @@ globalkeys = gears.table.join(
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Shift"   }, "Return", function () awful.spawn.with_shell("pcmanfm") end,
               {description = "open a file manager PcManFm", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "s", function () awful.spawn.with_shell("powermenu") end,
+              {description = "starts powermenu script", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "e", awesome.quit,
@@ -581,8 +583,8 @@ client.connect_signal("mouse::enter", function(c)
 end)
 
 --if beautiful.border_width > 0 then
-    client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-    client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+ client.connect_signal("focus", function(c) c.border_color = x.color2 end)
+ client.connect_signal("unfocus", function(c) c.border_color = x.background end)
 --end
 -- }}}
 

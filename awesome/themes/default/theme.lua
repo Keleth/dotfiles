@@ -51,12 +51,6 @@ theme.taglist_fg_occupied=x.color13
 theme.taglist_bg_empty=x.background
 theme.taglist_fg_empty=x.foreground
 
---tasklist
---theme.tasklist_bg_focus=x.background
---theme.tasklist_dg_urgent=x.background
---theme.tasklist_fg_normal=x.foreground
---theme.tasklist_fg_urgent=x.color5
-
 -- Generate taglist squares:
 local taglist_square_size = dpi(4)
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
