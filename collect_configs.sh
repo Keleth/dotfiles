@@ -4,7 +4,7 @@ CFG=~/.config/
 cp -rv ${CFG}i3 $DIR
 cp -rv ${CFG}moc $DIR
 cp -rv ${CFG}polybar $DIR
-#cp -rv ${CFG}vifm $DIR
+cp -rv ${CFG}qtile $DIR
 cp -rv ${CFG}sakura $DIR
 cp -rv ${CFG}awesome $DIR
 cp -rv ${CFG}lxsession $DIR

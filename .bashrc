@@ -56,9 +56,8 @@ alias mocp="/usr/bin/mocp -T ~/.config/moc/themes/gruvbox_theme"
 #alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias qtilelog='tail -n 100 ~/.local/share/qtile/qtile.log' # qtail log
 #alias l.='exa -a | egrep "^\."'
 
 
 /opt/shell-color-scripts/colorscript.sh random
-#. "$HOME/.cargo/env"
-#source /home/danila/develop/github/alacritty/extra/completions/alacritty.bash

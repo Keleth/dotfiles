@@ -244,7 +244,14 @@
         <width>100%</width>
       </action>
     </keybind>
-    <!--    <keybind key="W-d">
+    <keybind key="W-Down">
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+        <height>60%</height>
+        <width>60%</width>
+      </action>
+    </keybind>    <!--    <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind> -->
     <keybind key="C-A-d">
@@ -293,6 +300,11 @@
         <command>pcmanfm --find-files</command>
       </action>
     </keybind>
+    <keybind key="W-t">
+      <action name="Execute">
+        <command>emacs</command>
+      </action>
+    </keybind>
     <!-- Start terminal -->
     <keybind key="W-Return">
       <action name="Execute">
@@ -328,11 +340,11 @@
      </action>
   </keybind>
     <!--keybindings for LXPanel -->
-    <keybind key="W-r">
+<!--    <keybind key="W-r">
       <action name="Execute">
         <command>dmenu_run</command>
       </action>
-    </keybind>
+    </keybind> -->
     <keybind key="A-F2">
       <action name="Execute">
         <command>dmenu_run</command>

@@ -1,3 +1,25 @@
+! ██╗░░██╗██████╗░███████╗███████╗░██████╗░██╗░░░██╗██████╗░░██████╗███████╗███████╗
+! ╚██╗██╔╝██╔══██╗██╔════╝██╔════╝██╔═══██╗██║░░░██║██╔══██╗██╔════╝██╔════╝██╔════╝
+! ░╚███╔╝░██████╔╝█████╗░░███████╗██║░░░██║██║░░░██║██████╔╝██║░░░░░█████╗░░███████╗
+! ░██╔██╗░██╔══██╗██╔══╝░░╚════██║██║░░░██║██║░░░██║██╔══██╗██║░░░░░██╔══╝░░╚════██║
+! ██╔╝░██╗██║░░██║███████╗███████║╚██████╔╝╚██████╔╝██║░░██║╚██████╗███████╗███████║
+! ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚══════╝░╚═════╝░░╚═════╝░╚═╝░░╚═╝░╚═════╝╚══════╝╚══════╝
+!
+! -----------------------------------
+
+! Xft ---------------------------------
+Xft.dpi:       96
+Xft.autohint:  false
+Xft.antialias: true
+Xft.hinting:   true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+Xft.rgba:      rgb
+
+xscreensaver.fade:   false
+xscreensaver.unfade: false
+
+
 ! FOR ALL OTHER PROGRAMS USE XRESOURCES
 ! This includes xterm and urxvt
 *.foreground:   #bbc2cf
@@ -37,17 +59,3 @@
 *.color15:      #dfdfdf
 
 
-
-!! Xft ---------------------------------
-!! Xft.dpi:       96
-!! Xft.autohint:  false
-!! Xft.antialias: true
-!! Xft.hinting:   true
-!! Xft.hintstyle: hintslight
-!! Xft.lcdfilter: lcddefault
-!! Xft.rgba:      none
-
-!! Cursor-theme ------------------------
-!!  Xcursor.theme: Adwaita
-!!  Xcursor.size:  32
-!!

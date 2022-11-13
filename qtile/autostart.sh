@@ -7,9 +7,9 @@ function run {
     fi
 }
 
-#run picom -b --config  $HOME/.config/awesome/picom.conf
+run picom -b --config  $HOME/.config/awesome/picom.conf
 setxkbmap -model "pc105" -layout "us,ru" -option "grp:caps_toggle,grp_led:scroll"
-run volumeicon
+#run volumeicon
 run usr/bin/emacs --daemon
 #run mpd
 run /usr/bin/mocp -S
