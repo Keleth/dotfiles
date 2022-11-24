@@ -11,8 +11,8 @@ function run {
 setxkbmap -model "pc105" -layout "us,ru" -option "grp:caps_toggle,grp_led:scroll"
 run volumeicon
 run usr/bin/emacs --daemon
-#run mpd
-run /usr/bin/mocp -S
+run mpd
+#run /usr/bin/mocp -S
 #run /usr/bin/mocp -G
 run yandex-disk start
 run /usr/bin/feh --randomize --bg-fill ~/Изображения/wallpapers/*

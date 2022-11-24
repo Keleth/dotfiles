@@ -11,5 +11,6 @@ cp -rv ${CFG}lxsession $DIR
 cp -rv ${CFG}lxterminal $DIR
 cp -rv ${CFG}openbox $DIR
 cp -v ~/.Xresources $DIR
+cp -rv ${CFG}nvim $DIR
 #cp -v ~/.vimrc $DIR
 cp -v ~/.bashrc $DIR

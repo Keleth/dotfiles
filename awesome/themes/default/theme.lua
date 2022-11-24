@@ -46,6 +46,9 @@ theme.border_marked = x.color6
 -- hotkeys_[bg|fg|border_width|border_color|shape|opacity|modifiers_fg|label_bg|label_fg|group_margin|font|description_font]
 -- Example:
 --theme.taglist_bg_focus = "#ff0000"
+theme.hotkeys_fg=x.foregound
+theme.hotkeys_modifiers_fg=x.foreground
+theme.hotkeys_border_color=x.color13
 theme.taglist_bg_occupied=x.background
 theme.taglist_fg_occupied=x.color13
 theme.taglist_bg_empty=x.background

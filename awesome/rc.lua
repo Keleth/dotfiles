@@ -14,9 +14,6 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
--- Enable hotkeys help widget for VIM and other apps
--- when client with a matching name is opened:
-require("awful.hotkeys_popup.keys")
 
 -- Load Debian menu entries
 local debian = require("debian.menu")
@@ -104,22 +101,7 @@ awful.util.tagnames = {  "➊", "➋", "➌", "➍", "➎", "➏", "➐", "➑",
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.floating,
-    --awful.layout.suit.tile.left,
-    --awful.layout.suit.tile.bottom,
-    --awful.layout.suit.tile.top,
-    --awful.layout.suit.fair,
-    --awful.layout.suit.fair.horizontal,
-    --awful.layout.suit.spiral,
-    --awful.layout.suit.spiral.dwindle,
-    --awful.layout.suit.max,
-    --awful.layout.suit.max.fullscreen,
-    --awful.layout.suit.magnifier,
-    --awful.layout.suit.corner.nw,
-    -- awful.layout.suit.corner.ne,
-    -- awful.layout.suit.corner.sw,
-    -- awful.layout.suit.corner.se,
 }
--- }}}
 
 -- {{{ Menu
 -- Create a launcher widget and a main menu
@@ -292,6 +274,13 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "e", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
 
+    awful.key({ modkey }, "Print", function () awful.spawn.with_shell("~/develop/bash/screenshot full") end,
+              {description = "take screenshot of whole screen", group = "screenshots"}),
+    awful.key({ modkey, "Alt" }, "Print", function () awful.spawn.with_shell("~/develop/bash/screenshot window") end,
+              {description = "take screenshot active window", group = "screenshots"}),
+    awful.key({ modkey, "Control" }, "Print", function () awful.spawn.with_shell("~/develop/bash/screenshot select") end,
+              {description = "take screenshot with selected area", group = "screenshots"}),
+
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
@@ -306,9 +295,9 @@ globalkeys = gears.table.join(
               {description = "decrease the number of columns", group = "layout"}),
     awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
+
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
-
     awful.key({ modkey, "Control" }, "n",
               function ()
                   local c = awful.client.restore()
@@ -331,12 +320,14 @@ globalkeys = gears.table.join(
             {description = "decrease volume", group="launcher"}),
     awful.key({}, "XF86AudioMute", function() awful.spawn("amixer -D pulse sset Master toggle") end,
             {description = "mute volume", group="launcher"}),
-    awful.key({}, "XF86AudioPlay", function() awful.spawn("mocp -G") end,
+    awful.key({}, "XF86AudioPlay", function() awful.spawn("mpc toggle") end,
             {description = "toggle play/pause", group="launcher"}),
-    awful.key({}, "XF86AudioNext", function() awful.spawn("mocp -f") end,
+    awful.key({}, "XF86AudioNext", function() awful.spawn("mpc next") end,
             {description = "mpc next", group="launcher"}),
-    awful.key({}, "XF86AudioPrev", function() awful.spawn("mocp -r") end,
-            {description = "mpc prev", group="launcher"})
+    awful.key({}, "XF86AudioPrev", function() awful.spawn("mpc prev") end,
+            {description = "mpc prev", group="launcher"}),
+    awful.key({ modkey, Control }, "p", function() awful.spawn("powermenu") end,
+            {description = "powermenu with poweroff|reboot|suspend|", group="launcher"})
 
 )
 
@@ -594,9 +585,3 @@ beautiful.useless_gap = 8
 -- Autostart applications
 awful.spawn.with_shell("picom -b --config  $HOME/.config/awesome/picom.conf")
 awful.spawn.with_shell("$HOME/.config/awesome/autostart.sh")
---awful.spawn.with_shell('setxkbmap -model "pc105" -layout "us,ru" -option "grp:caps_toggle,grp_led:scroll"')
--- awful.spawn.with_shell "volumeicon &")
--- awful.spawn.with_shell("/usr/bin/emacs --daemon &")
--- awful.spawn.with_shell("mpd")
--- awful.spawn.with_shell("yandex-disk start")
--- awful.spawn.with_shell("nitrogen --restore")
