@@ -110,6 +110,9 @@ return packer.startup(function(use)
   -- Telescope
   use { "nvim-telescope/telescope.nvim"}
 
+  -- css-colors
+  use {"ap/vim-css-color"}
+
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter"}
 

@@ -108,7 +108,7 @@ require("nvim-tree").setup()
 require('lualine').setup {
 	options = {
 		icons_enabled = true,
-		theme = 'nord',
+		theme = 'tokyonight',
 	},
 }
 
