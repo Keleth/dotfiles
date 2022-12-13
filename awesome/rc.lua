@@ -310,8 +310,9 @@ globalkeys = gears.table.join(
               end,
               {description = "restore minimized", group = "client"}),
 
-    awful.key({ modkey },            "d",     function () awful.spawn("dmenu_run -i -nb '#282c34' -nf '#bbc2cf' -sb '#3e4451' -sf '#98be65' -fn JetBrainsMono:bold:pixelsize=14") end,
-              {description = "run dmenu", group = "launcher"}),
+--    awful.key({ modkey },            "d",     function () awful.spawn("dmenu_run -i -nb '#282c34' -nf '#bbc2cf' -sb '#3e4451' -sf '#98be65' -fn JetBrainsMono:bold:pixelsize=14") end,
+	awful.key({ modkey }, "d", function () awful.spawn("rofi -show run")	end,
+              {description = "run rofi", group = "launcher"}),
 
     -- Volumeconrtol
     awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn("amixer -D pulse sset Master 5%+") end,
@@ -320,14 +321,14 @@ globalkeys = gears.table.join(
             {description = "decrease volume", group="launcher"}),
     awful.key({}, "XF86AudioMute", function() awful.spawn("amixer -D pulse sset Master toggle") end,
             {description = "mute volume", group="launcher"}),
-    awful.key({}, "XF86AudioPlay", function() awful.spawn("mpc toggle") end,
+    awful.key({}, "XF86AudioPlay", function() awful.spawn("audacious -t") end,
             {description = "toggle play/pause", group="launcher"}),
-    awful.key({}, "XF86AudioNext", function() awful.spawn("mpc next") end,
+    awful.key({}, "XF86AudioNext", function() awful.spawn("audacious -f") end,
             {description = "mpc next", group="launcher"}),
-    awful.key({}, "XF86AudioPrev", function() awful.spawn("mpc prev") end,
+    awful.key({}, "XF86AudioPrev", function() awful.spawn("audacious -r") end,
             {description = "mpc prev", group="launcher"}),
-    awful.key({ modkey, Control }, "p", function() awful.spawn("powermenu") end,
-            {description = "powermenu with poweroff|reboot|suspend|", group="launcher"})
+    awful.key({ modkey, "Control" }, "p", function() awful.spawn("powermenu") end,
+            {description = "powermenu with poweroff|reboot|suspend|", group="awesome"})
 
 )
 

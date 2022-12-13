@@ -67,7 +67,7 @@ require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = {
     'bashls',
-    'luau_lsp',
+--    'luau_lsp',
     'marksman',
 --    'powershell_es',
   },
@@ -75,8 +75,10 @@ require("mason-lspconfig").setup({
 })
 
 require'lspconfig'.bashls.setup{}
-require'lspconfig'.luau_lsp.setup{}
+--require'lspconfig'.luau_lsp.setup{}
 require'lspconfig'.marksman.setup{}
+require'lspconfig'.pyright.setup{}
+-- require'lspconfig'.lualanguageserver.setup{}
 -- require'lspconfig'.powershell_es.setup{
 --   bundle_path = '~/.local/share/nvim/mason/packages/powershell-editor-services/PowerShellEditorServices/',
 -- }
