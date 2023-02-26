@@ -3,6 +3,8 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" xkb-switch
+Plug 'lyokha/vim-xkbswitch'
 " calendar
 Plug 'itchyny/calendar.vim'
 " wiki
@@ -27,6 +29,16 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 "
 "------------------------------------------------------------------
+
+" XKB-switch переключение раскладки с текущей в режиме ввода на англ. в
+" командном режиме используется только при наличии переменной $DISPLAY
+if $DISPLAY == "" 
+	let g:XkbSwitchEnabled = 0
+else
+    let g:XkbSwitchEnabled = 1
+    let g:XkbSwitchLib = '/opt/xkbswitch/libxkbswitch.so'
+    let g:XkbSwitchIMappings = ['ru']
+endif 
 
 " номера строк
 set number

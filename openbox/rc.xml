@@ -43,7 +43,7 @@
   </placement>
   <theme>
     <name>Syscrash</name>
-    <titleLayout>NLIMC</titleLayout>
+    <titleLayout>NOLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -251,7 +251,7 @@
       <action name="ToggleShowDesktop"/>
     </keybind>
     <!-- Keybindings for windows -->
-    <keybind key="A-F4">
+    <keybind key="W-S-q">
       <action name="Close"/>
     </keybind>
     <keybind key="A-Escape">
@@ -316,7 +316,16 @@
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
-    <keybind key="W-e">
+    <keybind key="W-d">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>rofi-run</name>
+        </startupnotify>
+        <command>rofi -show run</command>
+      </action>
+    </keybind>
+     <keybind key="W-e">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
@@ -325,7 +334,16 @@
         <command>pcmanfm</command>
       </action>
     </keybind>
-    <keybind key="W-t">
+    <keybind key="W-Return">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>alacritty</name>
+        </startupnotify>
+        <command>alacritty</command>
+      </action>
+    </keybind>
+     <keybind key="W-t">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
@@ -338,9 +356,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>clementine</name>
+          <name>audacity</name>
         </startupnotify>
-        <command>clementine -t</command>
+        <command>audacity -t</command>
       </action>
     </keybind>
   </keyboard>

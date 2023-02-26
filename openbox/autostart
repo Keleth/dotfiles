@@ -1,0 +1,5 @@
+#!/bin/bash
+
+picom -b --config ~/.config/openbox/picom.conf &
+tint2 &
+nitrogen --restore &
