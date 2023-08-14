@@ -5,8 +5,6 @@
 ! ██╔╝░██╗██║░░██║███████╗███████║╚██████╔╝╚██████╔╝██║░░██║╚██████╗███████╗███████║
 ! ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚══════╝░╚═════╝░░╚═════╝░╚═╝░░╚═╝░╚═════╝╚══════╝╚══════╝
 !
-! -----------------------------------
-
 ! Xft ---------------------------------
 Xft.dpi:       96
 Xft.autohint:  false
@@ -16,10 +14,37 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 Xft.rgba:      rgb
 
-xscreensaver.fade:   false
-xscreensaver.unfade: false
+
+! Urxvt -------------------------------
+URxvt.font: xft:JetBrainsMonoNL Nerd Font:size=12
+URxvt.perl-ext-common: "default, -searchable-scrollback,selection-to-clipboard,matcher,tabbed"
+URxvt.keysym.Meta-S:  builtin-string:
+URxvt.keysym.Meta-Shift-S:  searchable-scrollback:start
+
+URxvt*shading:85
+URxvt*saveLines: 3200
+
+!URxvt.font: xft:monaco:size=10
+! URxvt.perl-ext-common: "default, -searchable-scrollback"
+! clickable links
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+! clipboard
+URxvt.clipboard.autocopy: true
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+! tabs
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 3
+URxvt.tabbed.tab-bg: 0
+! scrollbar
+URxvt*scrollBar: true
+URxvt*scrollBar_right: true
 
 
+
+! -----------------------------------
 ! FOR ALL OTHER PROGRAMS USE XRESOURCES
 ! This includes xterm and urxvt
 *.foreground:   #bbc2cf
