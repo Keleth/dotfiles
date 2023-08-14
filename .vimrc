@@ -59,11 +59,12 @@ set nocompatible
 filetype plugin on
 
 " Vim Wiki
-let g:vimwiki_list = [{'path': '~/Yandex.Disk/wikiObsidian/wiki', 'path_html':'~/Yandex.Disk/wikiObsidian/wiki/export/html/', 'auto_diary_index':1}]
+let g:vimwiki_list = [{'path': '~/Yandex.Disk/wiki', 'path_html':'~/Yandex.Disk/wiki/export/html/', 'auto_diary_index':1, 'syntax': 'markdown', 'ext':'.md'}]
 au FileType vimwiki setlocal shiftwidth=6 tabstop=6 noexpandtab
 let g:vimwiki_diary_months = {1: 'Январь', 2: 'Февраль', 3: 'Март', 4: 'Апрель', 5: 'Май', 6: 'Июнь',
 			\7: 'Июль', 8: 'Август', 9: 'Сентябрь', 10: 'Октябрь',  11: 'Ноябрь', 12: 'Декабрь'
 			\}
+let g:vimwiki_global_ext = 0
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 au BufNewFile,BufReadPost *.wiki set filetype=vimwiki

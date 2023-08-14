@@ -334,16 +334,61 @@
         <command>pcmanfm</command>
       </action>
     </keybind>
-    <keybind key="W-Return">
+   <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>alacritty</name>
+          <name>volume up</name>
         </startupnotify>
-        <command>alacritty</command>
+        <command>amixer -D pulse sset Master 5%+</command>
       </action>
     </keybind>
-     <keybind key="W-t">
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>volume lower</name>
+        </startupnotify>
+        <command>amixer -D pulse sset Master 5%-</command>
+      </action>
+    </keybind>
+   <keybind key="XF86AudioPlay">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>play</name>
+        </startupnotify>
+        <command>audacious -t</command>
+      </action>
+    </keybind>
+   <keybind key="XF86AudioPrev">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>play</name>
+        </startupnotify>
+        <command>audacious -r</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioNext">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>play</name>
+        </startupnotify>
+        <command>audacious -f</command>
+      </action>
+    </keybind>
+    <keybind key="C-W-p">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>powermenu</name>
+        </startupnotify>
+        <command>powermenu</command>
+      </action>
+    </keybind>
+    <keybind key="W-Return">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
@@ -352,6 +397,15 @@
         <command>lxterminal</command>
       </action>
     </keybind>
+    <!--     <keybind key="W-t">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>lxterminal</name>
+        </startupnotify>
+        <command>lxterminal</command>
+      </action>
+    </keybind> -->
     <keybind key="C-W-x">
       <action name="Execute">
         <startupnotify>
