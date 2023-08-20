@@ -84,7 +84,7 @@ super + r
 
 #Urxvt
 super + t
-    sakura
+    urxvt
 
 #Pavucontrol
 super + v
@@ -96,7 +96,7 @@ super + v
 
 #alacritty
 super + Return
-    sakura
+    urxvt
 
 #Xkill
 super + Escape
@@ -105,7 +105,7 @@ super + Escape
 #Keyboard dependent
 #alacritty
 super + KP_Enter
-	sakura
+	urxvt
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -122,7 +122,7 @@ super + shift + Return
 
 #dmenu
 super + shift + d
-	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+    rofi -show run
 
 #dmenu
 super + d
@@ -231,13 +231,13 @@ ctrl + alt + r
 # Media keys
 ################################################################
 XF86AudioPlay
-    cmus-remote -u
+    mocp -G
 
 XF86AudioNext
-    cmus-remote -n
+    mocp -n
 
 XF86AudioPrev
-    cmus-remote -r
+    mocp -r
 
 #################################################################
 # ALT + ... KEYS
@@ -327,7 +327,7 @@ ctrl + shift + Escape
 
 #Scrot
 Print
-    scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+    scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
 
 #screeenshooter
 ctrl + Print
@@ -373,20 +373,20 @@ XF86AudioMute
 #mpc stop
 
 #PLAY
-XF86AudioPlay
-    playerctl play-pause
+#XF86AudioPlay
+#    playerctl play-pause
 
 #Next
-XF86AudioNext
-    playerctl next
+#XF86AudioNext
+#    playerctl next
 
 #previous
-XF86AudioPrev
-    playerctl previous
+#XF86AudioPrev
+#    playerctl previous
 
 #Stop
-XF86AudioStop
-    playerctl stop
+#XF86AudioStop
+#    playerctl stop
 
 #Brightness up
 XF86MonBrightnessUp
@@ -401,8 +401,8 @@ XF86MonBrightnessDown
 #########################
 
 #Hide polybar
-super + y
-    polybar-msg cmd toggle
+#super + y
+#    polybar-msg cmd toggle
 
 #################################################################
 #################################################################

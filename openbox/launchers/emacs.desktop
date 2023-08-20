@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=emacs
+GenericName=editor
+Comment=Open editor
+Exec=emacs
+Terminal=false
+Type=Application
+StartupNotify=true
+MimeType=text/plain;
+Icon=emacs
+
+

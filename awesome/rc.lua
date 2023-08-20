@@ -263,7 +263,7 @@ globalkeys = gears.table.join(
         {description = "go back", group = "client"}),
 
     -- Standard program
-    awful.key({ modkey,           }, "Return", function () awful.spawn.with_shell("sakura") end,
+    awful.key({ modkey,           }, "Return", function () awful.spawn.with_shell("urxvtcd") end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Shift"   }, "Return", function () awful.spawn.with_shell("pcmanfm") end,
               {description = "open a file manager PcManFm", group = "launcher"}),
@@ -273,6 +273,8 @@ globalkeys = gears.table.join(
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "e", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
+    awful.key({ modkey, "Shift"   }, "pause", function () awful.spawn.with_shell("systemctl suspend") end,
+              {description = "suspend system", group = "launcher"}),
 
     awful.key({ modkey }, "Print", function () awful.spawn.with_shell("~/develop/bash/screenshot full") end,
               {description = "take screenshot of whole screen", group = "screenshots"}),
@@ -310,8 +312,8 @@ globalkeys = gears.table.join(
               end,
               {description = "restore minimized", group = "client"}),
 
---    awful.key({ modkey },            "d",     function () awful.spawn("dmenu_run -i -nb '#282c34' -nf '#bbc2cf' -sb '#3e4451' -sf '#98be65' -fn JetBrainsMono:bold:pixelsize=14") end,
-	awful.key({ modkey }, "d", function () awful.spawn("rofi -show run")	end,
+--	awful.key({ modkey }, "d", function () awful.spawn("rofi -show run")	end,
+    awful.key({ modkey },  "d",     function () awful.spawn("dmenu_run -i -nb '#282c34' -nf '#bbc2cf' -sb '#3e4451' -sf '#98be65' -fn 'JetBrainsMonoNL Nerd:bold:pixelsize=14'") end,
               {description = "run rofi", group = "launcher"}),
 
     -- Volumeconrtol
@@ -321,11 +323,11 @@ globalkeys = gears.table.join(
             {description = "decrease volume", group="launcher"}),
     awful.key({}, "XF86AudioMute", function() awful.spawn("amixer -D pulse sset Master toggle") end,
             {description = "mute volume", group="launcher"}),
-    awful.key({}, "XF86AudioPlay", function() awful.spawn("audacious -t") end,
+    awful.key({}, "XF86AudioPlay", function() awful.spawn("mocp -G") end,
             {description = "toggle play/pause", group="launcher"}),
-    awful.key({}, "XF86AudioNext", function() awful.spawn("audacious -f") end,
+    awful.key({}, "XF86AudioNext", function() awful.spawn("mocp -f") end,
             {description = "mpc next", group="launcher"}),
-    awful.key({}, "XF86AudioPrev", function() awful.spawn("audacious -r") end,
+    awful.key({}, "XF86AudioPrev", function() awful.spawn("mocp -r") end,
             {description = "mpc prev", group="launcher"}),
     awful.key({ modkey, "Control" }, "p", function() awful.spawn("powermenu") end,
             {description = "powermenu with poweroff|reboot|suspend|", group="awesome"})

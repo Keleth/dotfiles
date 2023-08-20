@@ -17,15 +17,14 @@ Xft.rgba:      rgb
 
 ! Urxvt -------------------------------
 URxvt.font: xft:JetBrainsMonoNL Nerd Font:size=12
-URxvt.perl-ext-common: "default, -searchable-scrollback,selection-to-clipboard,matcher,tabbed"
-URxvt.keysym.Meta-S:  builtin-string:
-URxvt.keysym.Meta-Shift-S:  searchable-scrollback:start
+URxvt.perl-ext-common: "default,clipboard,selection-to-clipboard,matcher,tabbed,-searchable-scrollback"
+!URxvt.keysym.Meta-S:  builtin-string:
+!URxvt.keysym.Meta-Shift-S:  searchable-scrollback:start
 
 URxvt*shading:85
 URxvt*saveLines: 3200
 
 !URxvt.font: xft:monaco:size=10
-! URxvt.perl-ext-common: "default, -searchable-scrollback"
 ! clickable links
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1

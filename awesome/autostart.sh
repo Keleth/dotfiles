@@ -7,7 +7,7 @@ function run {
     fi
 }
 
-#run picom -b --config  $HOME/.config/awesome/picom.conf
+run picom -b --config  $HOME/.config/awesome/picom.conf
 setxkbmap -model "pc105" -layout "us,ru" -option "grp:caps_toggle,grp_led:scroll"
 #run volumeicon
 #run usr/bin/emacs --daemon
@@ -18,4 +18,4 @@ run mocp -S
 run yandex-disk start
 run /usr/bin/feh --randomize --bg-fill ~/Изображения/wallpapers/*
 #run clipmenud
-run ~/soft/Telegram/Telegram
+#run ~/soft/Telegram/Telegram

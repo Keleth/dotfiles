@@ -14,18 +14,19 @@ function run {
 #xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 #autorandr horizontal
 
-$HOME/.config/polybar/launch.sh &
+#$HOME/.config/bspwm/polybar/launch.sh &
+tint2 -c ~/.config/bspwm/tint2/tint2rc &
 
 #change your keyboard if you need it
 #setxkbmap -layout be
 
 keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 
-if [ $keybLayout = "be" ]; then
-  run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc-azerty &
-else
+#if [ $keybLayout = "be" ]; then
+#  run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc-azerty &
+#else
   run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
-fi
+#fi
 
 setxkbmap -model "pc105" -layout "us,ru" -option "grp:caps_toggle,grp_led:scroll"
 #Some ways to set your wallpaper besides variety or nitrogen
@@ -38,20 +39,18 @@ setxkbmap -model "pc105" -layout "us,ru" -option "grp:caps_toggle,grp_led:scroll
 
 #dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
-
 #conky -c $HOME/.config/bspwm/system-overview &
 #run variety &
 #run nm-applet &
 #run pamac-tray &
-run xfce4-power-manager &
-run yandex-disk start
+# run xfce4-power-manager &
 run /usr/bin/feh --randomize --bg-fill ~/Изображения/wallpapers/*
 #numlockx on &
 #blueberry-tray &
-picom --config $HOME/.config/bspwm/picom.conf &
+picom --config ~/.config/bspwm/picom.conf &
 #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-/usr/lib/xfce4/notifyd/xfce4-notifyd &
-run volumeicon &
+# /usr/lib/xfce4/notifyd/xfce4-notifyd &
+#run volumeicon &
 #nitrogen --restore &
 #run caffeine &
 #run vivaldi-stable &
@@ -61,4 +60,6 @@ run volumeicon &
 #run insync start &
 #run discord &
 #run spotify &
+run urxvt 
+run yandex-disk start
 #run atom &

@@ -4,10 +4,10 @@
 export TERM="xterm-256color"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export ALTERNATE_EDITOR=""                        # setting for emacsclient
-export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in terminal
-export VISUAL="emacsclient -c -a emacs"           # $VISUAL use Emacs in GUI mode
-#export EDITOR="vim"
-#export VISUAL="vim"
+#export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in terminal
+#export VISUAL="emacsclient -c -a emacs"           # $VISUAL use Emacs in GUI mode
+export EDITOR="vim"
+export VISUAL="vim"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -43,8 +43,9 @@ export PS1
 unset rc
 
 alias feh="feh --image-bg black"
-#alias mocp="mocp -T ~/.config/moc/themes/gruvbox_theme"
-#alias emacs="emacsclient -c -a emacs"
+alias mocp="mocp -T ~/.moc/themes/gruvbox_theme"
+alias emacs="emacsclient -c -a emacs"
+#alias dmenu="dmenu -nb '#282c34' -nf '#bbc2cf' -sb '#3e4451' -sf '#98be65' -fn JetBrainsMono:bold:pixelsize=14"
 #alias doomsync="~/.emacs.d/bin/doom sync"
 #alias doomdoctor="~/.emacs.d/bin/doom doctor"
 #alias doomupgrade="~/.emacs.d/bin/doom upgrade"
