@@ -25,6 +25,8 @@ Plug 'kien/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+"ripgrep
+Plug 'jremmen/vim-ripgrep'
 " Initialize plugin system
 call plug#end()
 "
@@ -33,7 +35,7 @@ call plug#end()
 " XKB-switch переключение раскладки с текущей в режиме ввода на англ. в
 " командном режиме используется только при наличии переменной $DISPLAY
 if $DISPLAY == "" 
-	let g:XkbSwitchEnabled = 0
+    let g:XkbSwitchEnabled = 0
 else
     let g:XkbSwitchEnabled = 1
     let g:XkbSwitchLib = '/opt/xkbswitch/libxkbswitch.so'
@@ -59,7 +61,8 @@ set nocompatible
 filetype plugin on
 
 " Vim Wiki
-let g:vimwiki_list = [{'path': '~/Yandex.Disk/wiki', 'path_html':'~/Yandex.Disk/wiki/export/html/', 'auto_diary_index':1, 'syntax': 'markdown', 'ext':'.md'}]
+" let g:vimwiki_list = [{'path': '~/Yandex.Disk/wiki', 'path_html':'~/Yandex.Disk/wiki/export/html/', 'auto_diary_index':1, 'syntax': 'markdown', 'ext':'.md'}]
+let g:vimwiki_list = [{'path': '~/Yandex.Disk/vim.wiki', 'path_html':'~/Yandex.Disk/vim.wiki/export/html/', 'auto_diary_index':1, 'ext':'.wiki'}]
 au FileType vimwiki setlocal shiftwidth=6 tabstop=6 noexpandtab
 let g:vimwiki_diary_months = {1: 'Январь', 2: 'Февраль', 3: 'Март', 4: 'Апрель', 5: 'Май', 6: 'Июнь',
 			\7: 'Июль', 8: 'Август', 9: 'Сентябрь', 10: 'Октябрь',  11: 'Ноябрь', 12: 'Декабрь'
@@ -70,6 +73,10 @@ let mapleader=" "
 au BufNewFile,BufReadPost *.wiki set filetype=vimwiki
 let g:markdown_fenced_languages = ['css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'sass', 'xml', 'html', 'java', 'sql', 'python', 'bash']
 
+" bind ripgrep
+nnoremap <leader>t :Rg :
+
+" :e %:h/w_=strftime("%Y%m%d_%H%M%S").wiki<CR><Esc>
 " Keys
 map <F10> :NERDTreeToggle<CR>
 map <F4> :TlistToggle<CR>

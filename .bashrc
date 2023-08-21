@@ -1,7 +1,7 @@
 # .bashrc
 
 ### EXPORT
-export TERM="xterm-256color"                      # getting proper colors
+#export TERM="xterm-256color"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export ALTERNATE_EDITOR=""                        # setting for emacsclient
 #export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in terminal
@@ -50,7 +50,7 @@ alias emacs="emacsclient -c -a emacs"
 #alias doomdoctor="~/.emacs.d/bin/doom doctor"
 #alias doomupgrade="~/.emacs.d/bin/doom upgrade"
 #alias doompurge="~/.emacs.d/bin/doom purge"
-
+alias ssh="TERM=xterm ssh"
 alias scp_kesha="scp -r -P 6022 -i ~/.ssh/id_rsa"
 #alias alacritty="/usr/local/bin/alacritty --config-file ~/.config/alacritty/alacritty.yml"
 #alias mocp="/usr/bin/mocp -T ~/.config/moc/themes/gruvbox_theme"
