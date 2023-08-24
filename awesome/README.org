@@ -332,7 +332,7 @@ globalkeys = gears.table.join(
         {description = "go back", group = "client"}),
 
     -- Standard program
-    awful.key({ modkey,           }, "Return", function () awful.spawn.with_shell("urxvtcd") end,
+    awful.key({ modkey,           }, "Return", function () awful.spawn.with_shell("alacritty") end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
@@ -395,14 +395,12 @@ globalkeys = gears.table.join(
             {description = "decrease volume", group="launcher"}),
     awful.key({}, "XF86AudioMute", function() awful.spawn("amixer -D pulse sset Master toggle") end,
             {description = "mute volume", group="launcher"}),
-    awful.key({}, "XF86AudioPlay", function() awful.spawn("mocp -G") end,
+    awful.key({}, "XF86AudioPlay", function() awful.spawn("mpc toggle") end,
             {description = "mpc toggle play/pause", group="launcher"}),
-    awful.key({}, "XF86AudioNext", function() awful.spawn("mocp -f") end,
+    awful.key({}, "XF86AudioNext", function() awful.spawn("mpc next") end,
             {description = "mpc next", group="launcher"}),
-    awful.key({}, "XF86AudioPrev", function() awful.spawn("mocp -R") end,
+    awful.key({}, "XF86AudioPrev", function() awful.spawn("mpc prev") end,
             {description = "mpc prev", group="launcher"})
-    awful.key({ modkey, "Control" }, "Pause", awful.spawn("systemctl suspend") end,
-              {description = "suspend system", group = "launcher"}),
 
 )
 

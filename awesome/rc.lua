@@ -275,6 +275,9 @@ globalkeys = gears.table.join(
               {description = "quit awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "pause", function () awful.spawn.with_shell("systemctl suspend") end,
               {description = "suspend system", group = "launcher"}),
+    awful.key({ modkey, "Control"   }, "F12", function () awful.spawn.with_shell("systemctl suspend") end,
+              {description = "suspend system", group = "launcher"}),
+
 
     awful.key({ modkey }, "Print", function () awful.spawn.with_shell("~/develop/bash/screenshot full") end,
               {description = "take screenshot of whole screen", group = "screenshots"}),

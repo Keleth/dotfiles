@@ -13,7 +13,7 @@ local theme = {}
 
 theme.tasklist_disable_icon = true
 
-theme.font          = "JetBrains Mono 10"
+theme.font          = "JetBrainsMono NL 10"
 -- This is how to get other .Xresources values (beyond colors 0-15, or custom variables)
 -- local cool_color = awesome.xrdb_get_value("", "color16")
 

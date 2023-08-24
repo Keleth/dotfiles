@@ -4,7 +4,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " xkb-switch
-Plug 'lyokha/vim-xkbswitch'
+" Plug 'lyokha/vim-xkbswitch'
 " calendar
 Plug 'itchyny/calendar.vim'
 " wiki
@@ -34,13 +34,17 @@ call plug#end()
 
 " XKB-switch переключение раскладки с текущей в режиме ввода на англ. в
 " командном режиме используется только при наличии переменной $DISPLAY
-if $DISPLAY == "" 
-    let g:XkbSwitchEnabled = 0
-else
-    let g:XkbSwitchEnabled = 1
-    let g:XkbSwitchLib = '/opt/xkbswitch/libxkbswitch.so'
-    let g:XkbSwitchIMappings = ['ru']
-endif 
+"if $DISPLAY == "" 
+"    let g:XkbSwitchEnabled = 0
+"else
+"    let g:XkbSwitchEnabled = 1
+"    let g:XkbSwitchLib = '/opt/xkbswitch/libxkbswitch.so'
+"    let g:XkbSwitchIMappings = ['ru']
+"endif 
+
+" русская раскладка мапится на английские буквы
+"set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
 " номера строк
 set number
