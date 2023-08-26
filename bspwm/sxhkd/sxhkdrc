@@ -60,7 +60,7 @@ super + F12
 
 #Atom
 super + e
-    atom
+    emacs
 
 #Browser
 super + w
@@ -79,12 +79,12 @@ super + w
 #    archlinux-logout
 
 #Rofi theme selector
-super + r
-    rofi-theme-selector
+#super + r
+#    rofi-theme-selector
 
 #Urxvt
 super + t
-    urxvt
+    urxvtcd
 
 #Pavucontrol
 super + v
@@ -96,7 +96,7 @@ super + v
 
 #alacritty
 super + Return
-    urxvt
+    urxvtcd
 
 #Xkill
 super + Escape
@@ -105,7 +105,11 @@ super + Escape
 #Keyboard dependent
 #alacritty
 super + KP_Enter
-	urxvt
+	urxvtcd
+
+super + d
+    rofi -show drun
+#dmenu_run -i -nb '#282c34' -nf '#bbc2cf' -sb '#3e4451' -sf '#98be65' -fn 'JetBrainsMonoNL Nerd:bold:pixelsize=14'
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -121,12 +125,12 @@ super + shift + Return
 #	thunar
 
 #dmenu
-super + shift + d
-    rofi -show run
+#super + shift + d
+#    rofi -show run
 
 #dmenu
-super + d
-    ~/.config/bspwm/launcher/launcher.sh
+#super + d
+#    ~/.config/bspwm/launcher/launcher.sh
 
 #reload sxhkd:
 super + shift + s
@@ -170,8 +174,8 @@ super + shift + s
 #    chromium -no-default-browser-check
 
 #Firefox
-ctrl + alt + f
-     firefox
+#ctrl + alt + f
+#     firefox
 
 #Nitrogen
 #ctrl + alt + i
@@ -194,12 +198,12 @@ ctrl + alt + f
 #     xfce4-settings-manager
 
 #Pulse Audio Control
-ctrl + alt + u
-     pavucontrol
+#ctrl + alt + u
+#     pavucontrol
 
 #Rofi theme selector
-ctrl + alt + r
-  rofi-theme-selector
+#ctrl + alt + r
+#  rofi-theme-selector
 
 #Spotify
 #ctrl + alt + s
@@ -231,13 +235,16 @@ ctrl + alt + r
 # Media keys
 ################################################################
 XF86AudioPlay
-    mocp -G
+    mpc toggle
+#    mocp -G
 
 XF86AudioNext
-    mocp -n
+    mpc next
+#    mocp -n
 
 XF86AudioPrev
-    mocp -r
+    mpc prev
+#    mocp -r
 
 #################################################################
 # ALT + ... KEYS
@@ -343,8 +350,8 @@ ctrl + Print
 #################################################################
 
 #xfce4-terminal dropdown
-F12
-    xfce4-terminal --drop-down
+#F12
+#    xfce4-terminal --drop-down
 
 
 #################################################################
@@ -451,8 +458,8 @@ super + space
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # Move focus to other monitor
-super + BackSpace
-		bspc monitor -f next
+#super + BackSpace
+#		bspc monitor -f next
 
 #################################################################
 # SUPER + ALT KEYS
@@ -469,6 +476,9 @@ super + alt + {_,shift + }{Left,Down,Up,Right}
 # Cancel preselection
 super + ctrl + space
 	bspc node --presel-dir cancel
+
+super + ctrl + F12
+    systemctl suspend
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -496,20 +506,20 @@ super + {_,shift + }a
 	bspc node @/ --flip {vertical,horizontal}
 
 # Move focused window to other monitor
-super + shift + Left
-	bspc node -m next --follow
+#super + shift + Left
+#	bspc node -m next --follow
 
 # Move focused window to other monitor
-super + shift + Right
-		bspc node -m next --follow
+#super + shift + Right
+#		bspc node -m next --follow
 
 # Move focused window to other monitor
-super + shift + Up
-	bspc node -m next --follow
+#super + shift + Up
+#	bspc node -m next --follow
 
 # Move focused window to other monitor
-super + shift + Down
-		bspc node -m next --follow
+#super + shift + Down
+#		bspc node -m next --follow
 
 #################################################################
 # SUPER + CONTROL KEYS

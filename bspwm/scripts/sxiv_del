@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/bin/mv "$file" /home/danila/.local/share/Trash/files ;;

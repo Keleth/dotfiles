@@ -14,21 +14,17 @@ function run {
 #xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 #autorandr horizontal
 
-#$HOME/.config/bspwm/polybar/launch.sh &
-tint2 -c ~/.config/bspwm/tint2/tint2rc &
+$HOME/.config/bspwm/polybar/launch.sh &
+#tint2 -c ~/.config/bspwm/tint2/tint2rc &
 
 #change your keyboard if you need it
 #setxkbmap -layout be
 
 keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 
-#if [ $keybLayout = "be" ]; then
-#  run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc-azerty &
-#else
-  run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
-#fi
+run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
-setxkbmap -model "pc105" -layout "us,ru" -option "grp:caps_toggle,grp_led:scroll"
+setxkbmap -model "pc105" -layout "us,ru" -option "grp:shift_caps_switch,grp_led:scroll"
 #Some ways to set your wallpaper besides variety or nitrogen
 #feh --bg-scale ~/.config/bspwm/wall.png &
 #feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
@@ -60,6 +56,5 @@ picom --config ~/.config/bspwm/picom.conf &
 #run insync start &
 #run discord &
 #run spotify &
-run urxvt 
 run yandex-disk start
-#run atom &
+run urxvtcd

@@ -8,7 +8,8 @@ function run {
 }
 
 run picom -b --config  $HOME/.config/awesome/picom.conf
-setxkbmap -model "pc105" -layout "us,ru" -option "grp:caps_toggle,grp_led:scroll"
+#setxkbmap -model "pc105" -layout "us,ru" -option "grp:caps_toggle,grp_led:scroll"
+setxkbmap -model "pc105" -layout "us,ru" -option "grp:shift_caps_switch,grp_led:scroll"
 #run volumeicon
 run usr/bin/emacs --daemon
 run mocp -S

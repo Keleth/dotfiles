@@ -1,0 +1,10 @@
+# -*- mode: org; -*-
+
+#+OPTIONS: html-style:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://keleth.myftp.biz:8443/resources/emacs/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://keleth.myftp.biz:8443/resources/emacs/readtheorg.css"/>
+
+#+HTML_HEAD: <script src="https://keleth.myftp.biz:8443/resources/emacs/jquery.min.js"></script>
+#+HTML_HEAD: <script src="https://keleth.myftp.biz:8443/resources/emacs/bootstrap.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="https://keleth.myftp.biz:8443/resources/emacs/jquery.stickytableheaders.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="https://keleth.myftp.biz:8443/resources/emacs/js/readtheorg.js"></script>

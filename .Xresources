@@ -46,40 +46,75 @@ URxvt*scrollBar_right: true
 ! -----------------------------------
 ! FOR ALL OTHER PROGRAMS USE XRESOURCES
 ! This includes xterm and urxvt
-*.foreground:   #bbc2cf
-*.background:   #282c34
-*.cursorColor:  #bbc2cf
+! -----------------------------------
+! One dark theme
+! -----------------------------------
+!*.foreground:   #bbc2cf
+!*.background:   #282c34
+!*.cursorColor:  #bbc2cf
 
 ! black
-*.color0:       #1c1f24
-*.color8:       #5b6268
+!*.color0:       #1c1f24
+!*.color8:       #5b6268
 
 ! red
-*.color1:       #ff6c6b
-*.color9:       #da8548
+!*.color1:       #ff6c6b
+!*.color9:       #da8548
 
 ! green
-*.color2:       #98be65
-*.color10:      #4db5bd
+!*.color2:       #98be65
+!*.color10:      #4db5bd
 
 ! yellow
-*.color3:       #da8548
-*.color11:      #ecbe7b
+!*.color3:       #da8548
+!*.color11:      #ecbe7b
 
 ! blue
-*.color4:       #51afef
-*.color12:      #3071db
+!*.color4:       #51afef
+!*.color12:      #3071db
 
 ! magenta
-*.color5:       #c678dd
-*.color13:      #a9a1e1
+!*.color5:       #c678dd
+!*.color13:      #a9a1e1
 
 ! cyan
-*.color6:       #5699af
-*.color14:      #46d9ff
+!*.color6:       #5699af
+!*.color14:      #46d9ff
 
 ! white
-*.color7:       #202328
-*.color15:      #dfdfdf
+!*.color7:       #202328
+!*.color15:      #dfdfdf
 
+!-----------------------------
+!One-light theme
+!-----------------------------
+! Custom
+*.foreground:    #383A42
+*.background:    #F9F9F9
+*.cursorColor:   #383A42
+*.highlightColor:#3A3F4B
 
+! Negro y gris
+*.color0:        #000000
+*.color8:        #383A42
+! Rojos
+*.color1:        #E45649
+*.color9:        #E45649
+! Verde
+*.color2:        #50A14F
+*.color10:       #50A14F
+! Amarillo
+*.color3:        #986801
+*.color11:       #986801
+! Azul
+*.color4:        #4078F2
+*.color12:       #4078F2
+! Magenta
+*.color5:        #A626A4
+*.color13:       #A626A4
+! Cyan
+*.color6:        #0184BC
+*.color14:       #0184BC
+! Blanco
+*.color7:        #A0A1A7
+*.color15:       #FFFFFF
