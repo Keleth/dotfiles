@@ -11,7 +11,8 @@ Plug 'itchyny/calendar.vim'
 Plug 'vimwiki/vimwiki'
 " цветовая схема gruvbox
 Plug 'morhetz/gruvbox'
-" Plug 'ycm-core/YouCompleteMe'
+Plug 'altercation/vim-colors-solarized'
+"Plug 'ycm-core/YouCompleteMe'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -55,9 +56,11 @@ set tabstop=4
 "set gfn=Ubuntu 12
 " подсветка поиска
 syntax on
-colorscheme gruvbox
-let g:airline_theme='gruvbox'
-set background=dark
+"colorscheme gruvbox
+set background=light
+colorscheme solarized
+let g:airline_theme='solarized'
+"set background=dark
 set hlsearch
 set incsearch
 

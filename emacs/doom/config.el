@@ -88,6 +88,7 @@
   :init
   :custom
   (org-roam-directory "~/Yandex.Disk/org/roam/")
+  (org-roam-completion-everywhere t)
   (org-roam-capture-templates
    '(("d", "default" plain
       "%?"
@@ -102,4 +103,14 @@
   (org-roam-index-file "~/Yandex.Disk/org/roam/index.org")
   :bind (("C-c n f" . org-roam-node-find)
          ("C-c n l" . org-roam-buffer-toggle)
-         ("C-c n i" . org-roam-node-insert)))
+         ("C-c n i" . org-roam-node-insert)
+         :map org-mode-map
+         ("C-M-i" . completion-at-point)
+         :map org-roam-dailies-map
+         ("Y" . org-roam-dailies-capture-yesterday)
+         ("T" . org-roam-dailies-capture-tomorrow))
+  :bind-keymap
+  ("C-c n d" . org-roam-dailies-map)
+  :config
+  (require 'org-roam-dailies)
+  )

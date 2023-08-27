@@ -24,7 +24,7 @@ keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 
 run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
-setxkbmap -model "pc105" -layout "us,ru" -option "grp:shift_caps_switch,grp_led:scroll"
+setxkbmap -model "pc105" -layout "us,ru" -option "grp:shift_caps_switch"
 #Some ways to set your wallpaper besides variety or nitrogen
 #feh --bg-scale ~/.config/bspwm/wall.png &
 #feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
