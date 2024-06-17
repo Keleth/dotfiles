@@ -1,0 +1,39 @@
+---
+window.opacity: 1.0
+
+import:
+  - ~/.config/alacritty/themes/catppuccin/catppuccin-latte.yml
+
+font:
+  normal:
+    family: JetBrainsMonoNL Nerd Font Mono
+    style: Regular
+
+  bold:
+    family: JetBrainsMonoNL Nerd Font Mono 
+    style: Bold
+
+  italic:
+    family: JetBrainsMonoNL Nerd Font Mono 
+    style: Italic
+
+  bold_italic:
+    family: JetBrainsMonoNL Nerd Font Mono 
+    style: Bold Italic
+
+  size: 12
+
+key_bindings:
+  #  - key: Return
+  #    mods: Control|Shift
+  #    action: SpawnNewInstance
+  - key: Equals
+    mods: Control
+    action: IncreaseFontSize
+  - key: Minus
+    mods: Control
+    action: DecreaseFontSize
+
+# Fixes nvim colors in tmux
+env:
+  TERM: xterm-256color

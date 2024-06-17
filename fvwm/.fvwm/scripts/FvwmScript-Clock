@@ -1,0 +1,42 @@
+WindowTitle {FvwmScript-Clock}
+WindowSize  60 14
+
+Init
+  Begin
+#    Set $time = (GetOutput {exec date +%e/%H%M""} 1 -1)
+#    Set $time = (GetOutput {exec date '+%a %e %b %H:%M:%S'} 1 -1)
+    Set $time = (GetOutput {exec date '+%H:%M'} 1 -1)
+    ChangeTitle  1 $time
+  End
+
+PeriodicTasks
+ Begin 
+  If (RemainderOfDiv (GetTime) 60)==0 Then
+    Begin
+#      Set $time = (GetOutput {exec date +%e/%H%M""} 1 -1)
+#      Set $time = (GetOutput {exec date '+%a %e %b %H:%M:%S' } 1 -1)
+      Set $time = (GetOutput {exec date '+%H:%M' } 1 -1)
+      ChangeTitle  1 $time
+    End
+  End
+
+Widget 1
+  Property
+    Size 60 14
+    Position 0 0
+    Colorset 10
+#    Font "Shadow=1 0 C:xft:Liberation:pixelsize=22:bold"
+    Font "xft:Helvetica:Medium:Roman:size=7:encoding=utf-8"
+    Type ItemDraw
+    Flags NoReliefString
+    Main
+        Case message of
+        SingleClic :
+            Begin
+                Do {Exec gsimplecal}
+            End
+        1 :
+            Begin
+                Do {Menu MenuRoot}
+            End
+    End

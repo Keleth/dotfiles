@@ -2,7 +2,7 @@
 
 picom -b --config ~/.config/openbox/picom.conf &
 setxkbmap -model "pc105" -layout "us,ru" -option "grp:caps_toggle,grp_led:scroll"
-tint2 -c ~/.config/openbox/tint2rc &
-#.config/openbox/polybar/launch.sh &
+#tint2 -c ~/.config/openbox/tint2rc &
+.config/openbox/polybar/launch.sh &
 #nitrogen --restore &
 feh --randomize --bg-fill ~/Изображения/wallpapers/* &

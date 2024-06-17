@@ -32,7 +32,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one-light)
+(setq doom-theme 'doom-solarized-light)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -40,7 +40,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Yandex.Disk/org/")
+(setq org-directory "~/MyCloud/_wiki/")
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -87,20 +87,20 @@
   :ensure t
   :init
   :custom
-  (org-roam-directory "~/Yandex.Disk/org/roam/")
+  (org-roam-directory "~/MyCloud/_wiki/roam/")
   (org-roam-completion-everywhere t)
-  (org-roam-capture-templates
-   '(("d", "default" plain
-      "%?"
-      :if-new(file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title:${title}\n")
-      :unarrowed t)
-     ("b", "book" plain
-      (file "~/Yandex.Disk/org/roam/Templates/BookNoteTemplate.org")
-      :if-new(file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title:${title}\n")
-      :unarrowed t)
-     )
-   )
-  (org-roam-index-file "~/Yandex.Disk/org/roam/index.org")
+;;  (org-roam-capture-templates
+;;   '(("d", "default" plain
+;;      "%?"
+;;      :if-new(file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title:${title}\n")
+;;      :unarrowed t)
+;;     ("b", "book" plain
+;;      (file "~/MyCloud/_wiki/roam/Templates/BookNoteTemplate.org")
+;;      :if-new(file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title:${title}\n")
+;;      :unarrowed t)
+;;     )
+;;   )
+  (org-roam-index-file "~/MyCloud/_wiki/roam/index.org")
   :bind (("C-c n f" . org-roam-node-find)
          ("C-c n l" . org-roam-buffer-toggle)
          ("C-c n i" . org-roam-node-insert)

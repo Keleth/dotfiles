@@ -4,14 +4,14 @@
 #export TERM="xterm-256color"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export ALTERNATE_EDITOR=""                        # setting for emacsclient
-export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in terminal
-export VISUAL="emacsclient -c -a emacs"           # $VISUAL use Emacs in GUI mode
-#export EDITOR="vim"
-#export VISUAL="vim"
+#export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in terminal
+#export VISUAL="emacsclient -c -a emacs"           # $VISUAL use Emacs in GUI mode
+export EDITOR="vim"
+export VISUAL="gvim"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+    . /etc/bashrc
 fi
 
 # User specific environment
@@ -42,19 +42,28 @@ export PS1
 
 unset rc
 
-alias feh="feh --image-bg black"
-alias mocp="mocp -T ~/.moc/themes/gruvbox_theme"
-alias emacs="emacsclient -c -a emacs"
+#alias feh="feh --image-bg black"
+#alias mocp="mocp -T ~/.moc/themes/gruvbox_theme"
+#alias emacs="emacsclient -c -a emacs"
+alias up="sudo apt-get update && sudo apt-get dist-upgrade && flatpak update"
+#alias rm="trash -v"
+alias mkdir="mkdir -p"
+#alias telegram='flatpak run org.telegram.desktop'
+alias rmd='/bin/rm  --recursive --force --verbose '
 #alias dmenu="dmenu -nb '#282c34' -nf '#bbc2cf' -sb '#3e4451' -sf '#98be65' -fn JetBrainsMono:bold:pixelsize=14"
 #alias doomsync="~/.emacs.d/bin/doom sync"
 #alias doomdoctor="~/.emacs.d/bin/doom doctor"
 #alias doomupgrade="~/.emacs.d/bin/doom upgrade"
 #alias doompurge="~/.emacs.d/bin/doom purge"
-alias ssh="TERM=xterm ssh"
-alias zd="cd ~/Yandex.Disk/vim.wiki/"
+#alias ssh="TERM=xterm ssh"
 alias scp_kesha="scp -r -P 6022 -i ~/.ssh/id_rsa"
 #alias alacritty="/usr/local/bin/alacritty --config-file ~/.config/alacritty/alacritty.yml"
 #alias mocp="/usr/bin/mocp -T ~/.config/moc/themes/gruvbox_theme"
+
+alias fli="flatpak install --noninteractive -y flathub"
+alias flr="flatpak remove --noninteractive -y"
+alias fr="flatpak repair"
+alias fl="flatpak list"
 
 # Changing "ls" to "exa"
 #alias ls='exa -al --color=always --group-directories-first' # my preferred listing
@@ -66,4 +75,6 @@ alias scp_kesha="scp -r -P 6022 -i ~/.ssh/id_rsa"
 
 
 /opt/shell-color-scripts/colorscript.sh random
+#echo "Сейчас за окном: "
+#~/develop/bash/weather_day
 #. "$HOME/.cargo/env"

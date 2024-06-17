@@ -1,0 +1,20 @@
+#!/bin/bash
+
+function run {
+    if ! pgrep $1 ;
+    then
+        $@&
+    fi
+}
+
+run picom -b --config  $HOME/.icewm/picom.conf
+setxkbmap -model "pc105" -layout "us,ru" -option "grp:caps_switch"
+#run volumeicon
+run usr/bin/emacs --daemon
+#run mpd
+#run /usr/bin/mocp -S
+#run /usr/bin/mocp -G
+run yandex-disk start
+#run /usr/bin/feh --randomize --bg-fill ~/Изображения/
+#run ~/soft/Telegram/Telegram
+
