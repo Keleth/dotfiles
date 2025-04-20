@@ -2,21 +2,19 @@
 " Specify a directory for plugins
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-" xkb-switch
-" Plug 'lyokha/vim-xkbswitch'
+" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " calendar
 Plug 'itchyny/calendar.vim'
 " wiki
-Plug 'ericbn/vim-solarized'
-" цветовая схема gruvbox
-" Plug 'morhetz/gruvbox'
+Plug 'catppuccin/vim'
+"Plug 'ayu-theme/ayu-vim'
 "
 "" Plug 'yorickpeterse/vim-paper'
 " Plug 'sonph/onehalf', { 'rtp': 'vim' }
-
+" wiki
+Plug 'vimwiki/vimwiki'
 "Plug 'ycm-core/YouCompleteMe'
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/taglist.vim'
@@ -27,39 +25,58 @@ Plug 'klen/python-mode', {'for': 'python'}
 "ctrlp (<C-p>) поиск по названиям файлов в директории
 Plug 'kien/ctrlp.vim'
 Plug 'rking/ag.vim'
+" Plug 'wfxr/minimap.vim'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " Initialize plugin system
 call plug#end()
 "
 "------------------------------------------------------------------
 
-" XKB-switch переключение раскладки с текущей в режиме ввода на англ. в
-" командном режиме используется только при наличии переменной $DISPLAY
-" if $DISPLAY == "" 
-"	let g:XkbSwitchEnabled = 0
-"else
-"    let g:XkbSwitchEnabled = 1
-"    let g:XkbSwitchLib = '/opt/xkbswitch/libxkbswitch.so'
-"    let g:XkbSwitchIMappings = ['ru']
-"endif 
-
+set keymap=russian-jcukenwin
+set iminsert=0 " Чтобы при старте ввод был на английском, а не русском (start > i)
+set imsearch=0 " Чтобы при старте поиск был на английском, а не русском (start > /)
+" Дополнительно можно добавить:
+" Чтобы вместо Ctrl-^ нажимать Ctrl-\
+inoremap <C-\> <C-^>
+" Смена цвета курсора
+highlight lCursor guifg=NONE guibg=Cyan
 
 " номера строк
 set number
 
 " меняю табы на пробелы
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set smarttab
 set expandtab
-set tabstop=4
+set smartindent
+
+" начинаем скролить с 8 строк до края
+set scrolloff=8 
+
+set relativenumber
+
+let g:netrw_altfile=1
+let g:netrw_preview=1
+
 "set gfn=Ubuntu 12
 " подсветка поиска
 syntax on
 if has('gui_running')
     set guioptions -=T
-    set guifont=JetBrainsMono\ Nerd\ Font\ \12
+    set guifont=FiraCode\ Nerd\ Font\ Mono\ \12
 endif
-set background=light
-colorscheme solarized
+
+" colors
+set termguicolors
+set background=dark
+colorscheme catppuccin_macchiato
+"let ayucolor="dark"
+"colorscheme ayu
+
 " let g:airline_theme='default'
 set hlsearch
 set incsearch
@@ -67,19 +84,71 @@ set incsearch
 set nocompatible
 filetype plugin on
 
+let mapleader=" "
+" edit config
+nnoremap <leader>ev :tabedit $MYVIMRC<CR>
+" reload config
+" nnoremap <leader><CR> :so ~/.vimrc<CR>
+" fzf for current directory with :Files, and git project with :GFiles
+nnoremap <leader>pf :Files<CR>
+nnoremap <C-p> :GFiles<CR>
+" File browser in vertical split
+nnoremap <leader>pv :Vex<CR>
+nnoremap <SPACE> <Nop>
+" for navigating through quickfix results, for example (:grep SOCKET **/*.c)
+nnoremap <C-j> :cprev<CR>
+nnoremap <C-k> :cnext<CR>
+" move selected line with J, K up and down considering idents
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+" map Y for visual and normal modes to copying into system clipboard
+nnoremap Y "+y         
+vnoremap Y "+y
+
+
+
 " Vim Wiki
-" let g:vimwiki_list = [{'path': '~/Yandex.Disk/wikiObsidian/vim.wiki', 'path_html':'~/Yandex.Disk/vim.wiki/export/html/', 'auto_diary_index':1}]
-" au FileType vimwiki setlocal shiftwidth=6 tabstop=6 noexpandtab
-" let g:vimwiki_diary_months = {1: 'Январь', 2: 'Февраль', 3: 'Март', 4: 'Апрель', 5: 'Май', 6: 'Июнь',
-" 			\7: 'Июль', 8: 'Август', 9: 'Сентябрь', 10: 'Октябрь',  11: 'Ноябрь', 12: 'Декабрь'
-" 			\}
-" nnoremap <SPACE> <Nop>
-" let mapleader=" "
-" au BufNewFile,BufReadPost *.wiki set filetype=vimwiki
 " let g:markdown_fenced_languages = ['css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'sass', 'xml', 'html', 'java', 'sql', 'python', 'bash']
 
+" Wiki
+let g:vimwiki_list = [{'path': '~/ncloud/wiki', 'path_html': '~/ncloud/wiki/vim_html', 'auto_diary_index':1, 'syntax': 'markdown', 'ext': 'md'}]
+au FileType vimwiki setlocal shiftwidth=4 tabstop=4 noexpandtab
+let g:vimwiki_diary_months = {1: 'Январь', 2: 'Февраль', 3: 'Март', 4: 'Апрель', 5: 'Май', 6: 'Июнь',
+        \7: 'Июль', 8: 'Август', 9: 'Сентябрь', 10: 'Октябрь',  11: 'Ноябрь', 12: 'Декабрь'
+        \}
+au BufNewFile,BufReadPost *.md set filetype=vimwiki
+
+
+" FZF
+" function! FZF() abort
+"     let l:tempname = tempname()
+"     " fzf | awk '{ print $1":1:0" }' > file
+"     execute 'silent !fzf --multi ' . '| awk ''{ print $1":1:0" }'' > ' . fnameescape(l:tempname)
+"     try
+"         execute 'cfile ' . l:tempname
+"         redraw!
+"     finally
+"         call delete(l:tempname)
+"     endtry
+" endfunction
+" 
+" " :Files
+" command! -nargs=* Files call FZF()
+" 
+" " \ff
+" nnoremap <leader>ff :Files<cr>
+" End FZF
+
+" minimap
+" let g:minimap_width = 10
+" let g:minimap_auto_start = 1
+" let g:minimap_auto_start_win_enter = 1
+
 " Keys
-map <F10> :NERDTreeToggle<CR>
+"map <F10> :NERDTreeToggle<CR>
+"map <F10> :Vex<CR>
 map <F4> :TlistToggle<CR>
 
-
+" Autocomands
+" source config after save
+autocmd BufWritePost .vimrc source %
