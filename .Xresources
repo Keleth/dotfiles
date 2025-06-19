@@ -5,6 +5,10 @@
 ! ██╔╝░██╗██║░░██║███████╗███████║╚██████╔╝╚██████╔╝██║░░██║╚██████╗███████╗███████║
 ! ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚══════╝░╚═════╝░░╚═════╝░╚═╝░░╚═╝░╚═════╝╚══════╝╚══════╝
 !
+
+Xcursor.theme: jimmac
+Xcursor.size: 22
+
 ! Xft ---------------------------------
 Xft.dpi:       96
 Xft.autohint:  false
@@ -42,6 +46,44 @@ URxvt*scrollBar: true
 URxvt*scrollBar_right: true
 
 
+! Motcha
+!
+*background: #1e1e2e
+*foreground: #cdd6f4
+*cursorColor: #f5e0dc
+
+! black
+*color0: #45475a
+*color8: #585b70
+
+! red
+*color1: #f38ba8
+*color9: #f38ba8
+
+! green
+*color2: #a6e3a1
+*color10: #a6e3a1
+
+! yellow
+*color3: #f9e2af
+*color11: #f9e2af
+
+! blue
+*color4: #89b4fa
+*color12: #89b4fa
+
+! magenta
+*color5: #f5c2e7
+*color13: #f5c2e7
+
+! cyan
+*color6: #94e2d5
+*color14: #94e2d5
+
+! white
+*color7: #bac2de
+*color15: #a6adc8
+
 
 ! -----------------------------------
 ! FOR ALL OTHER PROGRAMS USE XRESOURCES
@@ -52,36 +94,36 @@ URxvt*scrollBar_right: true
 !*.foreground:   #bbc2cf
 !*.background:   #282c34
 !*.cursorColor:  #bbc2cf
-
-! black
+!
+!! black
 !*.color0:       #1c1f24
 !*.color8:       #5b6268
-
-! red
+!
+!! red
 !*.color1:       #ff6c6b
 !*.color9:       #da8548
-
-! green
+!
+!! green
 !*.color2:       #98be65
 !*.color10:      #4db5bd
-
-! yellow
+!
+!! yellow
 !*.color3:       #da8548
 !*.color11:      #ecbe7b
-
-! blue
+!
+!! blue
 !*.color4:       #51afef
 !*.color12:      #3071db
-
-! magenta
+!
+!! magenta
 !*.color5:       #c678dd
 !*.color13:      #a9a1e1
-
-! cyan
+!
+!! cyan
 !*.color6:       #5699af
 !*.color14:      #46d9ff
-
-! white
+!
+!! white
 !*.color7:       #202328
 !*.color15:      #dfdfdf
 
@@ -89,32 +131,32 @@ URxvt*scrollBar_right: true
 !One-light theme
 !-----------------------------
 ! Custom
-*.foreground:    #383A42
-*.background:    #F9F9F9
-*.cursorColor:   #383A42
-*.highlightColor:#3A3F4B
-
-! Negro y gris
-*.color0:        #000000
-*.color8:        #383A42
-! Rojos
-*.color1:        #E45649
-*.color9:        #E45649
-! Verde
-*.color2:        #50A14F
-*.color10:       #50A14F
-! Amarillo
-*.color3:        #986801
-*.color11:       #986801
-! Azul
-*.color4:        #4078F2
-*.color12:       #4078F2
-! Magenta
-*.color5:        #A626A4
-*.color13:       #A626A4
-! Cyan
-*.color6:        #0184BC
-*.color14:       #0184BC
-! Blanco
-*.color7:        #A0A1A7
-*.color15:       #FFFFFF
+!*.foreground:    #383A42
+!*.background:    #F9F9F9
+!*.cursorColor:   #383A42
+!*.highlightColor:#3A3F4B
+!
+!! Negro y gris
+!*.color0:        #000000
+!*.color8:        #383A42
+!! Rojos
+!*.color1:        #E45649
+!*.color9:        #E45649
+!! Verde
+!*.color2:        #50A14F
+!*.color10:       #50A14F
+!! Amarillo
+!*.color3:        #986801
+!*.color11:       #986801
+!! Azul
+!*.color4:        #4078F2
+!*.color12:       #4078F2
+!! Magenta
+!*.color5:        #A626A4
+!*.color13:       #A626A4
+!! Cyan
+!*.color6:        #0184BC
+!*.color14:       #0184BC
+!! Blanco
+!*.color7:        #A0A1A7
+!*.color15:       #FFFFFF

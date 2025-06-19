@@ -1,3 +1,6 @@
+" plugins i think move it to external file for plugins
+" so ~/.vim/plugins.vim
+" from here ------ 
 " plug.vim
 " Specify a directory for plugins
 " - Avoid using standard Vim directory names like 'plugin'
@@ -7,8 +10,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/calendar.vim'
 " wiki
 Plug 'catppuccin/vim'
-"Plug 'ayu-theme/ayu-vim'
-"
 "" Plug 'yorickpeterse/vim-paper'
 " Plug 'sonph/onehalf', { 'rtp': 'vim' }
 " wiki
@@ -31,9 +32,13 @@ Plug 'rking/ag.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Initialize plugin system
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 call plug#end()
 "
+" ------- to here
 "------------------------------------------------------------------
+set nocompatible
 
 set keymap=russian-jcukenwin
 set iminsert=0 " Чтобы при старте ввод был на английском, а не русском (start > i)
@@ -41,11 +46,10 @@ set imsearch=0 " Чтобы при старте поиск был на англ�
 " Дополнительно можно добавить:
 " Чтобы вместо Ctrl-^ нажимать Ctrl-\
 inoremap <C-\> <C-^>
-" Смена цвета курсора
-highlight lCursor guifg=NONE guibg=Cyan
+set number           " номера строк
+set autowriteall     " автосохранение при переключении буферов
+set complete=.,w,b,u
 
-" номера строк
-set number
 
 " меняю табы на пробелы
 set tabstop=4 softtabstop=4
@@ -67,24 +71,46 @@ let g:netrw_preview=1
 syntax on
 if has('gui_running')
     set guioptions -=T
-    set guifont=FiraCode\ Nerd\ Font\ Mono\ \12
+    set guifont=FiraCode\ Nerd\ Font\ Mono\ \14
 endif
 
 " colors
 set termguicolors
 set background=dark
 colorscheme catppuccin_macchiato
-"let ayucolor="dark"
-"colorscheme ayu
+
+" Смена цвета курсора для русской расклдаки
+highlight lCursor guifg=NONE guibg=Cyan
+
+" Замена фона у номеров строк
+hi LineNr guibg=bg
+" hi LineNr guibg=grey
+" отступ
+" set foldcolumn=2
+" hi foldcolumn guibg=bg
+
 
 " let g:airline_theme='default'
 set hlsearch
 set incsearch
 
-set nocompatible
+" disable scrollbars
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+
 filetype plugin on
 
 let mapleader=" "
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "ksnippets"]
+
 " edit config
 nnoremap <leader>ev :tabedit $MYVIMRC<CR>
 " reload config
@@ -104,7 +130,8 @@ vnoremap K :m '<-2<CR>gv=gv
 " map Y for visual and normal modes to copying into system clipboard
 nnoremap Y "+y         
 vnoremap Y "+y
-
+" turn-off highlight for searches results
+nnoremap <leader><space> :nohlsearch<CR>
 
 
 " Vim Wiki
@@ -151,4 +178,9 @@ map <F4> :TlistToggle<CR>
 
 " Autocomands
 " source config after save
-autocmd BufWritePost .vimrc source %
+augroup myvimrc
+    autocmd!
+    autocmd BufWritePost .vimrc source %
+augroup END
+
+au filetype vimwiki silent! iunmap <buffer> <Tab>
