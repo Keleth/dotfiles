@@ -8,8 +8,8 @@ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswi
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export ALTERNATE_EDITOR=""                        # setting for emacsclient
 export EDITOR="vim"           # $EDITOR use Emacs in terminal
-export VISUAL="vim"           # $VISUAL use Emacs in GUI mode
-export LF_ICONS=$(cat ~/.config/lf/ICONS)
+export VISUAL="gvim"           # $VISUAL use Emacs in GUI mode
+#export LF_ICONS=$(cat ~/.config/lf/ICONS)
 export COLORTERM=truecolor
 
 # Source global definitions
@@ -41,12 +41,14 @@ parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-PS1="[\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(parse_git_branch)\$ "
+# PS1='\[\e[34m\]\t 🕒 \W/ 📂 ▶\[\e[m\]'
+PS1="[\$(date +%k:%M:%S)] \[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(parse_git_branch)\$ "
 export PS1
 
 unset rc
 
-#alias feh="feh --image-bg black"
+alias lf="lfub"
+alias feh="feh --image-bg black"
 #alias mocp="mocp -T ~/.moc/themes/gruvbox_theme"
 #alias emacs="emacsclient -c -a emacs"
 #alias em="/usr/bin/emacs -nw"
@@ -81,11 +83,10 @@ alias fl="flatpak list"
 #	unset LF_TEMPDIR
 #}
 
-/opt/shell-color-scripts/colorscript.sh random
+~/.local/bin/colorscript/colorscript.sh random
 #echo "Сейчас за окном: "
 #~/develop/bash/weather_day
-#. "$HOME/.cargo/env"
-#
+##
 #eval "$(starship init bash)"
 
 #
