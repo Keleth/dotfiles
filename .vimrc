@@ -82,13 +82,19 @@ colorscheme catppuccin_macchiato
 " Смена цвета курсора для русской расклдаки
 highlight lCursor guifg=NONE guibg=Cyan
 
+if !has('gui_running')
+    highlight Normal guibg=NONE
+    highlight NonText guibg=NONE
+    highlight Normal ctermbg=NONE
+    highlight NonText ctermbg=NONE
+endif
+
 " Замена фона у номеров строк
 hi LineNr guibg=bg
 " hi LineNr guibg=grey
 " отступ
 " set foldcolumn=2
 " hi foldcolumn guibg=bg
-
 
 " let g:airline_theme='default'
 set hlsearch
@@ -144,7 +150,7 @@ let g:vimwiki_diary_months = {1: 'Январь', 2: 'Февраль', 3: 'Мар
         \7: 'Июль', 8: 'Август', 9: 'Сентябрь', 10: 'Октябрь',  11: 'Ноябрь', 12: 'Декабрь'
         \}
 au BufNewFile,BufReadPost *.md set filetype=vimwiki
-
+let g:vimwiki_global_ext = 0
 
 " FZF
 " function! FZF() abort
