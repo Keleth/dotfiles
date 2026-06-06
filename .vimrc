@@ -8,32 +8,45 @@ call plug#begin('~/.vim/plugged')
 " Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " calendar
 Plug 'itchyny/calendar.vim'
-" wiki
-Plug 'catppuccin/vim'
+Plug 'morhetz/gruvbox'
+"Plug 'dracula/vim', { 'as': 'dracula'}
+"Plug 'altercation/vim-colors-solarized'
 "" Plug 'yorickpeterse/vim-paper'
 " Plug 'sonph/onehalf', { 'rtp': 'vim' }
 " wiki
 Plug 'vimwiki/vimwiki'
-"Plug 'ycm-core/YouCompleteMe'
 "Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-scripts/taglist.vim'
+" Plug 'vim-scripts/taglist.vim'
 " PHP
 " Plug 'StanAngeloff/php.vim', {'for': 'php'} 
 " python
 Plug 'klen/python-mode', {'for': 'python'}
-"ctrlp (<C-p>) поиск по названиям файлов в директории
 Plug 'kien/ctrlp.vim'
 Plug 'rking/ag.vim'
 " Plug 'wfxr/minimap.vim'
-"Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Initialize plugin system
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
+Plug 'liuchengxu/vim-which-key'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+"Plug 'SirVer/ultisnips'
+" Code completion
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+" Java-completion
+Plug 'artur-shaik/vim-javacomplete2'
+Plug 'majutsushi/tagbar'
 call plug#end()
 "
 " ------- to here
@@ -70,24 +83,31 @@ let g:netrw_preview=1
 " подсветка поиска
 syntax on
 if has('gui_running')
+    set guioptions -=m  " отключить главное меню
     set guioptions -=T
-    set guifont=FiraCode\ Nerd\ Font\ Mono\ \14
+    set guifont=FiraCode\ Nerd\ Font\ Mono\ \12
 endif
 
 " colors
 set termguicolors
-set background=dark
-colorscheme catppuccin_macchiato
+set background=light
+colorscheme gruvbox
+
+" Tabs
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
 
 " Смена цвета курсора для русской расклдаки
 highlight lCursor guifg=NONE guibg=Cyan
 
-if !has('gui_running')
-    highlight Normal guibg=NONE
-    highlight NonText guibg=NONE
-    highlight Normal ctermbg=NONE
-    highlight NonText ctermbg=NONE
-endif
+" if !has('gui_running')
+"     highlight Normal guibg=NONE
+"     highlight NonText guibg=NONE
+"     highlight Normal ctermbg=NONE
+"     highlight NonText ctermbg=NONE
+" endif
 
 " Замена фона у номеров строк
 hi LineNr guibg=bg
@@ -106,19 +126,81 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 
+" установка системного буфера обмена, если не указан регситр
+set clipboard^=unnamedplus
+
+" отключение бибика
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
+
 filetype plugin on
 
-let mapleader=" "
+" deoplete config
+" Don't forget to start deoplete let g:deoplete#enable_at_startup = 1 " Less spam let g:deoplete#auto_complete_start_length = 2 
+" Use smartcase
+let g:deoplete#enable_smart_case = 1
 
-" UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
+
+" Setup completion sources
+let g:deoplete#sources = {}
+
+" IMPORTANT: PLEASE INSTALL JAVACOMPLETE2  AND ULTISNIPS OR DONT ADD THIS LINE!
+" =====================================
+
+let g:deoplete#sources.java = ['jc', 'javacomplete2', 'file', 'buffer', 'ultisnips']
+
+" =====================================
+
+""use TAB as the mapping
+inoremap <silent><expr> <TAB>
+    \ pumvisible() ?  "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "" {{{
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+endfunction "" }}}
+" end deoplete config
+
+" ultisnips config
+" Since we are already using Deoplete, and using tab with both doesn't work nice use <c-j> instead
+let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "ksnippets"]
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+" end ultisnips
+
+
+let mapleader=" "
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+
+" UltiSnips
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" let g:UltiSnipsSnippetDirectories=["UltiSnips", "ksnippets"]
+
+
+" Airline
+" ---- Airline Tabs setup ----
+" Enable tabline to show all open buffers like tabs
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+" Optional: show just filename
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " edit config
 nnoremap <leader>ev :tabedit $MYVIMRC<CR>
+nnoremap <leader>eb :tabedit ~/.bashrc<CR>
 " reload config
 " nnoremap <leader><CR> :so ~/.vimrc<CR>
 " fzf for current directory with :Files, and git project with :GFiles
@@ -138,19 +220,27 @@ nnoremap Y "+y
 vnoremap Y "+y
 " turn-off highlight for searches results
 nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader>p :call KlthSwitchTheme()<CR> 
+nnoremap <S-l> :bn<CR>
+nnoremap <S-h> :bp<CR>
+nnoremap <leader>q :bd<CR>
+nnoremap <leader>Q :!bd<CR>
+nnoremap <leader>w :w<CR>
 
 
 " Vim Wiki
 " let g:markdown_fenced_languages = ['css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'sass', 'xml', 'html', 'java', 'sql', 'python', 'bash']
 
 " Wiki
-let g:vimwiki_list = [{'path': '~/ncloud/wiki', 'path_html': '~/ncloud/wiki/vim_html', 'auto_diary_index':1, 'syntax': 'markdown', 'ext': 'md'}]
+let g:vimwiki_list = [{'path': '~/Nextcloud/vault', 'path_html': '~/Nextcloud/vault/export_html',
+        \'auto_diary_index':1, 'syntax':'markdown', 'ext': 'md'}]
 au FileType vimwiki setlocal shiftwidth=4 tabstop=4 noexpandtab
 let g:vimwiki_diary_months = {1: 'Январь', 2: 'Февраль', 3: 'Март', 4: 'Апрель', 5: 'Май', 6: 'Июнь',
         \7: 'Июль', 8: 'Август', 9: 'Сентябрь', 10: 'Октябрь',  11: 'Ноябрь', 12: 'Декабрь'
         \}
-au BufNewFile,BufReadPost *.md set filetype=vimwiki
+" au BufNewFile,BufReadPost *.md set filetype=vimwiki
 let g:vimwiki_global_ext = 0
+au filetype vimwiki silent! iunmap <buffer> <Tab>
 
 " FZF
 " function! FZF() abort
@@ -165,6 +255,35 @@ let g:vimwiki_global_ext = 0
 "     endtry
 " endfunction
 " 
+function! KlthSwitchTheme()
+    let l:d = &background
+    if d == "dark"
+        set background=light
+    else
+        set background=dark
+    endif
+"    echo d
+
+"    let l:c = g:colors_name
+"    if c == "monokai"
+"        colorscheme catppuccin_latte 
+"    else
+"        colorscheme monokai
+"        AirlineTheme dark
+"    endif
+"    echo c
+endfunction
+
+function! KlthTriggerLocWindow()
+    let l:c = getloclist(0, {'winid': 0}).winid 
+    if c == 0
+        lopen
+    else
+        lclose
+    endif
+endfunction
+
+
 " " :Files
 " command! -nargs=* Files call FZF()
 " 
@@ -178,15 +297,35 @@ let g:vimwiki_global_ext = 0
 " let g:minimap_auto_start_win_enter = 1
 
 " Keys
+map <F2> :call KlthTriggerLocWindow()<CR> 
 "map <F10> :NERDTreeToggle<CR>
 "map <F10> :Vex<CR>
-map <F4> :TlistToggle<CR>
+map <F4> :TagbarToggle<CR>
+map <F5> :setlocal spell! spelllang=en_us,ru_ru<CR>
+" fix spellcheck url
+let g:spellfile_URL = 'https://ftp.nluug.nl/pub/vim/runtime/spell'
 
-" Autocomands
+
+" Auto commands
 " source config after save
 augroup myvimrc
     autocmd!
     autocmd BufWritePost .vimrc source %
 augroup END
 
-au filetype vimwiki silent! iunmap <buffer> <Tab>
+" au filetype vimwiki silent! iunmap <buffer> <Tab>
+
+" Java completion
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+autocmd FileType java JCEnable
+
+" Относительные номера строк только для режима редактирования
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber 
+
+autocmd FileType html,javascript
+  \ :iabbrev <buffer> cl console.log("");<esc>2hi
+  \ :ab axios_ axiosExec({url: FRS().appPath + '/api/v2/', method: ''})<CR>.then(response => {<CR>console.log(response.data);<CR>})<CR>.catch(error => {<CR>axiosErrorHandler(error);<CR>});<ESC>06kf)hi
+  \ :ab dce document.createElement('');<ESC>3hi
+  \ :ab dct document.createTextNode('');<ESC>3hi
+

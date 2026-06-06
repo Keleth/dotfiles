@@ -6,11 +6,14 @@ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswi
 ### EXPORT
 #export TERM="xterm-256color"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
-export ALTERNATE_EDITOR=""                        # setting for emacsclient
-export EDITOR="vim"           # $EDITOR use Emacs in terminal
-export VISUAL="gvim"           # $VISUAL use Emacs in GUI mode
+#export ALTERNATE_EDITOR="vim"                        # setting for emacsclient
+export TERMINAL="st"
+export EDITOR="vim"          
+export VISUAL="gvim"        
 #export LF_ICONS=$(cat ~/.config/lf/ICONS)
 export COLORTERM=truecolor
+#export GTK_THEME=Adwaita:dark
+
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -24,6 +27,12 @@ then
 fi
 export PATH
 
+# load cargo
+#. "$HOME/.cargo/env"
+
+# load git functions
+. "$HOME/develop/bash/git-prompt.sh"
+
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
@@ -36,38 +45,53 @@ if [ -d ~/.bashrc.d ]; then
 	done
 fi
 
-# git current branch function
-parse_git_branch() {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-
-# PS1='\[\e[34m\]\t 🕒 \W/ 📂 ▶\[\e[m\]'
-PS1="[\$(date +%k:%M:%S)] \[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(parse_git_branch)\$ "
+#PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \e[35m$(__git_ps1 " %s")\e[0m\$ '
+#export PS1="\e[32m\]\u\[\e[m\]@\e[36m\]\h\[\e[m\] \e[35m\]\w\[\e[m\] \e[34m\] \$(__git_ps1) \[\e[m\]\n└─ [\$?] \$ ▶ "
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(__git_ps1 "%s") \$ '
 export PS1
+
+# autocomplete
+#bind 'set show-all-if-ambiguous on'
+#bind 'TAB:menu-complete'
+
 
 unset rc
 
-alias lf="lfub"
-alias feh="feh --image-bg black"
+#alias feh="feh --image-bg black"
 #alias mocp="mocp -T ~/.moc/themes/gruvbox_theme"
-#alias emacs="emacsclient -c -a emacs"
-#alias em="/usr/bin/emacs -nw"
-alias up="sudo apt update && sudo apt upgrade"
-#alias rm="trash -v"
+alias fk="sudo !!"
+alias v="vim"
+#alias up="sudo apt update && sudo apt upgrade"
+alias up="epm update && epm full-upgrade"
+#alias rm="trash-put"
 alias mkdir="mkdir -p"
-#alias telegram='flatpak run org.telegram.desktop'
-alias rmd='/bin/rm  --recursive --force --verbose '
+#alias rmd='/bin/rm  --recursive --force --verbose '
 #alias dmenu="dmenu -nb '#282c34' -nf '#bbc2cf' -sb '#3e4451' -sf '#98be65' -fn JetBrainsMono:bold:pixelsize=14"
 #alias ssh="TERM=xterm ssh"
-alias scp_kesha="scp -r -P 6022 -i ~/.ssh/id_rsa"
-#alias alacritty="/usr/local/bin/alacritty --config-file ~/.config/alacritty/alacritty.yml"
-#alias mocp="/usr/bin/mocp -T ~/.config/moc/themes/gruvbox_theme"
+#alias scp_kesha="scp -r -P 6022 -i ~/.ssh/id_rsa"
+
+#GIT alias
+#alias ec="emacsclient -r -a emacs"
+alias ga="git add"
+alias gcm="git commit -m"
+alias gp="git push origin"
+# abf
+#alias abf-build="abf build -b rosa2023.1 -a x86_64 -r rosa13/main -r rosa13/contrib -r rosa13/non-free --no-extra-tests --save-to-repository keleth_personal/main --update-type newpackage"
+
+alias s2chopper="java -jar /opt/s2chopper-1.0.jar"
+alias chopper="ssh 192.168.1.40"
+alias wtd="$HOME/develop/bash/weather_day"
+alias wt="$HOME/develop/bash/weather"
 
 alias fli="flatpak install --noninteractive -y flathub"
 alias flr="flatpak remove --noninteractive -y"
 alias fr="flatpak repair"
 alias fl="flatpak list"
-#alias ec="emacsclient -c -a emacs"
+
+# VM
+alias vm-list="virsh -c qemu+ssh://192.168.1.40/system list --all"
+alias vm-start="virsh -c qemu+ssh://192.168.1.40/system start "
+alias vm="ssh st@192.168.1.40 -p 2222"
 
 #alias qtilelog='tail -n 100 ~/.local/share/qtile/qtile.log' # qtail log
 
@@ -83,10 +107,11 @@ alias fl="flatpak list"
 #	unset LF_TEMPDIR
 #}
 
-~/.local/bin/colorscript/colorscript.sh random
+#~/.local/bin/colorscript/colorscript.sh random
 #echo "Сейчас за окном: "
 #~/develop/bash/weather_day
 ##
 #eval "$(starship init bash)"
 
-#
+
+export PATH="$HOME/.local/bin:$PATH"
